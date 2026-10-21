@@ -60,11 +60,15 @@ def main() -> int:
     header.append("extern const int asset_game_script_count;")
     header.append("#endif")
 
-    body.append("const AssetBlob asset_game_scripts[] = {")
+    script_names = []
     for i, path in enumerate(games):
         name = "asset_game_%02d_js" % i
         data = open(path, "rb").read()
         body.append(c_array(name, data))
+        body.append("")
+        script_names.append(name)
+    body.append("const AssetBlob asset_game_scripts[] = {")
+    for name in script_names:
         body.append("{ %s, %s_len }," % (name, name))
     body.append("};")
     body.append("const int asset_game_script_count = %d;" % len(games))
