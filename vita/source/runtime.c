@@ -189,12 +189,12 @@ static JSValue js_g(JSContext *ctx, JSValueConst this_val, int argc, JSValueCons
         cv_bezier(argint(argc, argv, 1, 0), (float)argnum(argc, argv, 2, 0),
                   (float)argnum(argc, argv, 3, 0), (float)argnum(argc, argv, 4, 0),
                   (float)argnum(argc, argv, 5, 0), (float)argnum(argc, argv, 6, 0),
-                  (float)argnum(argc, argv, 7, 0), (float)argnum(argc, argv, 8, 0));
+                  (float)argnum(argc, argv, 7, 0));
         return JS_UNDEFINED;
     case OP_QUAD:
         cv_quad(argint(argc, argv, 1, 0), (float)argnum(argc, argv, 2, 0),
                 (float)argnum(argc, argv, 3, 0), (float)argnum(argc, argv, 4, 0),
-                (float)argnum(argc, argv, 5, 0), (float)argnum(argc, argv, 6, 0));
+                (float)argnum(argc, argv, 5, 0));
         return JS_UNDEFINED;
     case OP_ARC:
         cv_arc(argint(argc, argv, 1, 0), (float)argnum(argc, argv, 2, 0),
@@ -343,14 +343,16 @@ static JSValue js_g(JSContext *ctx, JSValueConst this_val, int argc, JSValueCons
 static int call_global_1(const char *name, double a) {
     JSValue global = JS_GetGlobalObject(g_ctx);
     JSValue fn = JS_GetPropertyStr(g_ctx, global, name);
-    JSValue ret;
+    JSValue ret, arg;
     int ok = 1;
     JS_FreeValue(g_ctx, global);
     if (!JS_IsFunction(g_ctx, fn)) {
         JS_FreeValue(g_ctx, fn);
         return 0;
     }
-    ret = JS_Call(g_ctx, fn, JS_UNDEFINED, 1, &(JSValue){JS_NewFloat64(g_ctx, a)});
+    arg = JS_NewFloat64(g_ctx, a);
+    ret = JS_Call(g_ctx, fn, JS_UNDEFINED, 1, &arg);
+    JS_FreeValue(g_ctx, arg);
     JS_FreeValue(g_ctx, fn);
     if (JS_IsException(ret)) {
         dump_exception(name);
