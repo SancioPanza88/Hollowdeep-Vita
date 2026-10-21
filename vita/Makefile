@@ -56,6 +56,8 @@ $(OBJV):
 $(OBJH)/%.o: source/%.c | $(OBJH)
 	$(HOST_CC) $(HOST_CFLAGS) -c $< -o $@
 
+$(OBJH)/runtime.o: $(GEN)/assets_data.c
+
 $(OBJH)/%.o: $(QJS)/%.c | $(OBJH)
 	$(HOST_CC) $(HOST_CFLAGS) -c $< -o $@
 
@@ -78,6 +80,8 @@ host: $(BUILD)/hollowdeep_host
 
 $(OBJV)/%.o: source/%.c | $(OBJV)
 	$(VITA_CC) $(VITA_CFLAGS) -c $< -o $@
+
+$(OBJV)/runtime.o: $(GEN)/assets_data.c
 
 $(OBJV)/%.o: $(QJS)/%.c | $(OBJV)
 	$(VITA_CC) $(VITA_CFLAGS) -c $< -o $@

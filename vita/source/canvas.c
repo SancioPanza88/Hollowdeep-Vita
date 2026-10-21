@@ -881,7 +881,6 @@ void cv_draw_image(int id, int src_kind, int src_id, float sx, float sy, float s
     V2 p0, p1;
     int px, py;
     int x0, x1, y0, y1;
-    float ddx, ddy;
     uint32_t *copy = NULL;
     if (!c || dw == 0 || dh == 0) return;
     sp = src_pixels(src_kind, src_id, &iw, &ih);
@@ -902,8 +901,6 @@ void cv_draw_image(int id, int src_kind, int src_id, float sx, float sy, float s
     if (y0 < c->clip[1]) y0 = c->clip[1];
     if (x1 > c->clip[2]) x1 = c->clip[2];
     if (y1 > c->clip[3]) y1 = c->clip[3];
-    ddx = (p1.x - p0.x) / (dw != 0 ? dw : 1);
-    ddy = (p1.y - p0.y) / (dh != 0 ? dh : 1);
     if (c->m.b == 0.0f && c->m.c == 0.0f) {
         for (py = y0; py < y1; py++) {
             float fy = ((float)py + 0.5f - p0.y) / (p1.y - p0.y) * dh;
