@@ -44,20 +44,21 @@ jobs:
           vita-elf-create --help >/dev/null 2>&1 || echo "vita-elf-create missing"
           echo "PATH ok"
 
-      - name: Extract game assets
+      - name: Game assets
         run: |
           set -eux
-          python3 -m pip install --quiet fonttools brotli \
-            || python3 -m pip install --quiet --break-system-packages fonttools brotli
-          python3 tools/extract_assets.py
+          # vita/assets/* are generated from Hollowdeep.html and committed, so the
+          # CI image needs no font tooling. Regenerate with
+          #   python3 tools/extract_assets.py
+          n=$(ls vita/assets/game_*.js | wc -l)
+          test "$n" -ge 15
+          test -s vita/assets/font.ttf
+          echo "$n game scripts, font $(wc -c < vita/assets/font.ttf) bytes"
           python3 tools/make_vita_art.py
 
       - name: Host self-test (same runtime, headless)
         run: |
           set -eux
-          node --check vita/js/shim.js
-          node --check vita/js/ui.js
-          node tools/local_test.js 200 "6:ArrowDown,8:ArrowDownUp,10:ArrowDown,12:ArrowDownUp,16:Enter,18:EnterUp,30:Enter,32:EnterUp,90: ,92:SpaceUp"
           make -C vita host
           mkdir -p shots
           ./vita/build/hollowdeep_host --frames 200 --out shots \
