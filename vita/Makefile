@@ -29,9 +29,11 @@ ASSET_DEPS := ../tools/embed.py js/shim.js js/ui.js assets/font.ttf $(GAME_JS)
 
 INCLUDES := -I$(GEN) -Isource -Ithird_party -I$(QJS)
 WARN := -Wall -Wno-unused-parameter -Wno-unused-function -Wno-format-truncation
+# QuickJS normally receives this from its own Makefile
+QJS_DEFS := -D_GNU_SOURCE -DCONFIG_VERSION='"2025-09-13"'
 
-HOST_CFLAGS := -O2 -g -std=gnu11 $(WARN) $(INCLUDES) -DHOLLOWDEEP_HOST=1
-VITA_CFLAGS := -O2 -std=gnu11 $(WARN) $(INCLUDES) -DHOLLOWDEEP_VITA=1 \
+HOST_CFLAGS := -O2 -g -std=gnu11 $(WARN) $(INCLUDES) $(QJS_DEFS) -DHOLLOWDEEP_HOST=1
+VITA_CFLAGS := -O2 -std=gnu11 $(WARN) $(INCLUDES) $(QJS_DEFS) -DHOLLOWDEEP_VITA=1 \
 	-mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -ffunction-sections -fdata-sections
 
 .PHONY: all host vpk clean assets
