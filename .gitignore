@@ -1,0 +1,22 @@
+# build outputs
+vita/build/
+vita/sce_sys/
+shots/
+*.vpk
+*.velf
+*.elf
+*.self
+
+# local harness state
+host_save.json
+
+# python
+__pycache__/
+*.pyc
+
+# os
+.DS_Store
+Thumbs.db
+
+# agent metadata
+.freebuff/

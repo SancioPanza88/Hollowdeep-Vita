@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.png binary
+*.ttf binary
+vita/third_party/stb_image.h -text
+vita/third_party/stb_truetype.h -text

@@ -1,0 +1,949 @@
+story.js:10	DAWN
+story.js:10	ASHES
+story.js:10	THE CROWN
+story.js:10	FORGOTTEN
+story.js:13	WHAT THE MUD KEEPS
+story.js:13	THE GRAVEKEEPER
+story.js:14	THE ROTTING SAINT
+story.js:14	THE ROTTING SAINT
+story.js:15	THE EMBER CROWN
+story.js:15	THE HOLLOW KING
+story.js:19	VITALITY
+story.js:19	+1 heart
+story.js:20	EDGE
+story.js:20	+1 damage
+story.js:21	SWIFTNESS
+story.js:21	speed & recovery
+story.js:22	LANTERN
+story.js:22	stronger pulse
+story.js:26	THE WHISPERING DOOR
+story.js:27	THE SEALED MEMORY
+story.js:28	THE RESIN SCHOLAR
+story.js:29	HOLD THE LIGHT
+story.js:30	THE EMBER WITCH
+story.js:31	THE COLLAPSE
+story.js:32	THE MIRROR OF VEYRA
+story.js:187	[story] missing scene
+story.js:296	THE GRAVEKEEPER
+story.js:297	EMBER WITCH
+story.js:297	THE HOLLOW KING
+story.js:298	THE SAINT
+story.js:298	THE DOOR
+story.js:303	NARRATOR
+story.js:304	NARRATOR
+story.js:326	 locked
+story.js:326	 on
+story_scenes.js:15	HOLLOWDEEP
+story_scenes.js:15	THE LANTERN BELOW
+story_scenes.js:15	A STORY OF MEMORY AND ASH
+story_scenes.js:16	NARRATOR
+story_scenes.js:16	Ashfall has not seen a dawn in eleven days.
+story_scenes.js:17	NARRATOR
+story_scenes.js:17	The lanterns went out one by one. Last night, the last one began to die.
+story_scenes.js:19	MARA
+story_scenes.js:19	You came. I was beginning to think the dark had eaten your name too.
+story_scenes.js:20	Are you... the light?
+story_scenes.js:21	MARA
+story_scenes.js:21	A memory of one. My name is Mara. I have waited a long time for someone who still remembers how to carry a flame.
+story_scenes.js:23	For the village.
+story_scenes.js:24	For my sister. The Hollow took her.
+story_scenes.js:25	For the truth.
+story_scenes.js:27	MARA
+story_scenes.js:27	Then we will bring them a dawn, or we will die trying.
+story_scenes.js:28	MARA
+story_scenes.js:28	Ah. The one it took. I will help you remember her. That is what the lantern is for.
+story_scenes.js:29	MARA
+story_scenes.js:29	Truth is a blade with two edges. Carry it carefully.
+story_scenes.js:30	MARA
+story_scenes.js:30	Below us is Veyra. A city that drowned in a single night. Its memories are still down there, rotting.
+story_scenes.js:31	MARA
+story_scenes.js:31	The Hollow eats memory. It has already eaten the names of everyone in your village. Except yours. Except mine.
+story_scenes.js:33	I trust you, Mara.
+story_scenes.js:34	I trust no one.
+story_scenes.js:36	MARA
+story_scenes.js:36	Good. Then we will be afraid together.
+story_scenes.js:37	MARA
+story_scenes.js:37	Wise. Keep the lantern between us, then. Light is a poor thing to trust blindly.
+story_scenes.js:38	MARA
+story_scenes.js:38	There is a king at the bottom. The first Lamplighter. He has worn the Hollow like a crown for three hundred years.
+story_scenes.js:39	MARA
+story_scenes.js:39	End him, and the Hollow ends. That is the whole of it.
+story_scenes.js:40	And if he does not want to end?
+story_scenes.js:41	MARA
+story_scenes.js:41	...Then you will have to decide what he is.
+story_scenes.js:42	CHAPTER I
+story_scenes.js:42	WHAT THE MUD KEEPS
+story_scenes.js:42	THE DESCENT
+story_scenes.js:54	CHAPTER II
+story_scenes.js:54	THE ROTTING SAINT
+story_scenes.js:54	THE GARDEN DISTRICT
+story_scenes.js:55	MARA
+story_scenes.js:55	This was the Garden District. The water brought rot, and the rot brought flowers.
+story_scenes.js:56	NARRATOR
+story_scenes.js:56	Something is writing in the silt ahead. It has been writing for a long time.
+story_scenes.js:57	MARA
+story_scenes.js:57	The Gravekeeper spoke of a scholar. If anyone is still keeping notes down here, it will be him.
+story_scenes.js:58	Notes? In this place?
+story_scenes.js:59	MARA
+story_scenes.js:59	Memory is a kind of writing. The Hollow is a kind of erasing. Perhaps he thought he could outwrite it.
+story_scenes.js:60	MARA
+story_scenes.js:60	Stay close. The flowers are listening.
+story_scenes.js:72	CHAPTER III
+story_scenes.js:72	THE EMBER CROWN
+story_scenes.js:72	THE FORGE OF VEYRA
+story_scenes.js:73	NARRATOR
+story_scenes.js:73	The Ember Halls. Every flame here is a memory burning down to its last thought.
+story_scenes.js:74	ORIN
+story_scenes.js:74	Aurel forged the crown in this hall. His sister lit the furnace. The records are... somewhat singed.
+story_scenes.js:75	He was not trying to become a god. He was trying to build a vessel large enough to hold a city.
+story_scenes.js:76	MARA
+story_scenes.js:76	The furnace is still warm. That means something down here is still remembering.
+story_scenes.js:78	EMBER WITCH
+story_scenes.js:78	Warm? It is furious. There is a difference, little candle.
+story_scenes.js:79	EMBER WITCH
+story_scenes.js:79	You smell of the surface. Of rain. Of people who still believe the sun is a promise.
+story_scenes.js:80	MARA
+story_scenes.js:80	We are here for the crown.
+story_scenes.js:81	EMBER WITCH
+story_scenes.js:81	Everyone is. The crown is downstairs, wearing a king. Take a brand before you go. It will keep the dark from taking you.
+story_scenes.js:82	And the price?
+story_scenes.js:83	EMBER WITCH
+story_scenes.js:83	The crown will know its own. That is all. That is everything.
+story_scenes.js:84	MARA
+story_scenes.js:84	Do not listen to her.
+story_scenes.js:85	EMBER WITCH
+story_scenes.js:85	She would say that. She is a candle that has already burned down to the wick.
+story_scenes.js:86	MARA
+story_scenes.js:87	THE EMBER CROWN
+story_scenes.js:87	THE LAST LIGHT IS BELOW
+story_scenes.js:87	CHAPTER III
+story_scenes.js:96	THE WHISPERING DOOR
+story_scenes.js:96	A MEMORY THAT REFUSES TO CLOSE
+story_scenes.js:96	SECRET
+story_scenes.js:97	NARRATOR
+story_scenes.js:97	A door stands in the mud where no door should be. Its wood is a hundred mouths, all closed.
+story_scenes.js:98	MARA
+story_scenes.js:98	Do not touch it. It remembers names. It will use yours.
+story_scenes.js:99	THE DOOR
+story_scenes.js:100	It said a name.
+story_scenes.js:101	MARA
+story_scenes.js:101	An old one. Listen, and it will cost you. Seal it, and it will cost you something else.
+story_scenes.js:103	Listen to the door.
+story_scenes.js:103	-1 heart, +25 embers, a memory
+story_scenes.js:104	Seal it with your lantern.
+story_scenes.js:104	+1 max heart
+story_scenes.js:105	Walk away.
+story_scenes.js:105	Some doors should stay shut.
+story_scenes.js:107	NARRATOR
+story_scenes.js:107	The mouths open. You see white towers and a red sun. A woman in a lamplighter coat is laughing. Then the water comes.
+story_scenes.js:108	MARA
+story_scenes.js:108	You heard the city. Did it say his name again?
+story_scenes.js:109	Aurel. Who is Aurel?
+story_scenes.js:110	MARA
+story_scenes.js:110	Someone I failed to save. Leave it.
+story_scenes.js:111	NARRATOR
+story_scenes.js:111	You press the lantern to the wood. The mouths close one by one, sighing like wet leaves. Something warm stays in your chest.
+story_scenes.js:112	MARA
+story_scenes.js:112	You did not listen. That was kind. Kindness is not always wisdom, but it is rarer.
+story_scenes.js:113	MARA
+story_scenes.js:113	Good. Some doors are better left as doors.
+story_scenes.js:114	NARRATOR
+story_scenes.js:114	Behind you, the mud closes over the threshold. The deep goes on.
+story_scenes.js:123	THE RESIN SCHOLAR
+story_scenes.js:123	A MAN SUSPENDED IN AMBER
+story_scenes.js:123	THE GARDEN
+story_scenes.js:124	NARRATOR
+story_scenes.js:124	A man hangs inside a cocoon of amber, pen still moving.
+story_scenes.js:125	ORIN
+story_scenes.js:125	Ah. A living one. Splendid. Could you - carefully - not touch the resin with your bare hands?
+story_scenes.js:126	MARA
+story_scenes.js:126	He has been here since before the flood. The rot keeps him alive. It may also be the only thing holding him together.
+story_scenes.js:127	ORIN
+story_scenes.js:127	Orin. Cartographer, archivist, reluctant immortal. I have mapped every vein of the Hollow. I can help you, if you help me.
+story_scenes.js:128	ORIN
+story_scenes.js:128	But the resin is also food for the rot. Break it, and I will need something of yours to keep standing.
+story_scenes.js:130	Free him. (-1 heart)
+story_scenes.js:130	Orin joins you. He knows the way.
+story_scenes.js:131	Take the relic in his hands.
+story_scenes.js:131	+1 damage. The amber dims.
+story_scenes.js:132	Ask what he knows.
+story_scenes.js:132	Lore, +10 embers. Leave him.
+story_scenes.js:134	NARRATOR
+story_scenes.js:134	You crack the amber with the butt of your weapon. Orin falls into your arms, cold and laughing. The cocoon takes a little of your warmth as payment.
+story_scenes.js:135	ORIN
+story_scenes.js:135	Oh, that is much better. I have not seen my own hands in thirty years. They are still holding a pen. Good.
+story_scenes.js:136	ORIN
+story_scenes.js:136	The crown is not a crown. It is a contract, written in names. Aurel signed it in his own blood.
+story_scenes.js:137	NARRATOR
+story_scenes.js:137	You prise the relic from his fingers. It is a small brass compass with no needle. The amber dims. His pen stops.
+story_scenes.js:138	MARA
+story_scenes.js:138	You could have saved him.
+story_scenes.js:139	I saved us.
+story_scenes.js:140	MARA
+story_scenes.js:140	...Yes. That is what I am afraid of.
+story_scenes.js:141	ORIN
+story_scenes.js:141	The Hollow is not a monster. It is a hunger that was once a promise. The king is the promise. The hunger is the price. Go carefully.
+story_scenes.js:142	MARA
+story_scenes.js:142	He will still be here when we come back. If there is a back.
+story_scenes.js:143	NARRATOR
+story_scenes.js:143	Behind the cocoon, something green and patient turns toward the sound of your breathing.
+story_scenes.js:152	THE EMBER WITCH
+story_scenes.js:152	A BRAND FOR THE DARK
+story_scenes.js:152	THE FORGE
+story_scenes.js:153	EMBER WITCH
+story_scenes.js:153	Back so soon? You have the look of someone who has been arguing with a candle.
+story_scenes.js:154	MARA
+story_scenes.js:154	Do not call me that.
+story_scenes.js:155	EMBER WITCH
+story_scenes.js:155	I will call you what you are. A flame that remembers being a woman.
+story_scenes.js:156	EMBER WITCH
+story_scenes.js:156	Now. The offer. One mark, and the Hollow will never take you. The dark will look at you and see its own reflection.
+story_scenes.js:157	What happens to me?
+story_scenes.js:158	EMBER WITCH
+story_scenes.js:158	You become difficult to forget. Also difficult to love. A fair trade, most days.
+story_scenes.js:159	MARA
+story_scenes.js:159	She is not lying. She is not telling the whole truth either.
+story_scenes.js:162	Take the Ember Brand.
+story_scenes.js:162	+1 heart, +1 damage. The Dawn will close.
+story_scenes.js:163	+20 embers. Keep your name.
+story_scenes.js:164	Ask what the crown is.
+story_scenes.js:167	EMBER WITCH
+story_scenes.js:167	The crown is a vessel. Aurel poured a city into it. A city is heavy. A city is loud. After three hundred years, he is less a king than a lid.
+story_scenes.js:168	MARA
+story_scenes.js:168	Then help us open it.
+story_scenes.js:169	EMBER WITCH
+story_scenes.js:169	I am helping. I am offering you a handle.
+story_scenes.js:171	Take the Ember Brand.
+story_scenes.js:171	+1 heart, +1 damage. The Dawn will close.
+story_scenes.js:172	+20 embers. Keep your name.
+story_scenes.js:175	NARRATOR
+story_scenes.js:175	The brand sinks into your wrist. It does not hurt. It remembers hurting, somewhere far away, and lends you the memory.
+story_scenes.js:176	MARA
+story_scenes.js:176	You let it mark you. Now it can find you.
+story_scenes.js:177	Then it will find me standing.
+story_scenes.js:178	MARA
+story_scenes.js:178	You kept your name.
+story_scenes.js:179	EMBER WITCH
+story_scenes.js:179	For now. Names are heavy things. You will tire.
+story_scenes.js:180	NARRATOR
+story_scenes.js:180	The forge breathes. Somewhere below, a crown turns toward you, curious.
+story_scenes.js:189	THE MIRROR OF VEYRA
+story_scenes.js:189	THE NIGHT THE CITY DROWNED
+story_scenes.js:189	THE HALL OF NAMES
+story_scenes.js:190	NARRATOR
+story_scenes.js:190	A mirror stands upright in the ash. It does not show you.
+story_scenes.js:191	MARA
+story_scenes.js:191	It shows the last night. I have never dared.
+story_scenes.js:192	You were there.
+story_scenes.js:193	MARA
+story_scenes.js:193	I was the one who lit the lamps while the water came. My brother went into the dark to hold the city. I have been holding the light ever since.
+story_scenes.js:195	Touch the mirror.
+story_scenes.js:195	Learn the truth. This will matter.
+story_scenes.js:196	Shatter it.
+story_scenes.js:196	+1 max heart. Mara will remember alone.
+story_scenes.js:197	Leave it.
+story_scenes.js:197	Some mirrors are doors.
+story_scenes.js:199	NARRATOR
+story_scenes.js:199	A man in a lamplighter coat stands in a drowning street. A woman with a lantern shouts his name.
+story_scenes.js:200	AUREL
+story_scenes.js:200	Mara! Take the light! I can hold the rest!
+story_scenes.js:201	NARRATOR
+story_scenes.js:201	He opens his chest. The city pours in. The crown is not forged. It grows.
+story_scenes.js:202	MARA
+story_scenes.js:202	...He said he could hold it.
+story_scenes.js:203	He did.
+story_scenes.js:204	MARA
+story_scenes.js:204	Then why is he still holding it?
+story_scenes.js:205	NARRATOR
+story_scenes.js:205	The mirror breaks into a hundred drowned rooms. Something in your chest grows harder, and heavier, and will not break.
+story_scenes.js:206	MARA
+story_scenes.js:206	You did not have to see it. I did.
+story_scenes.js:207	I know.
+story_scenes.js:208	MARA
+story_scenes.js:208	Then we go on without it. We have enough ghosts.
+story_scenes.js:209	NARRATOR
+story_scenes.js:209	Far below, the throne is waiting.
+story_scenes.js:223	GRAVEKEEPER
+story_scenes.js:223	Turn back. The graves are full.
+story_scenes.js:224	MARA
+story_scenes.js:224	He has been guarding empty graves since the flood. He does not know he is dead.
+story_scenes.js:225	I am not here to rob them.
+story_scenes.js:226	GRAVEKEEPER
+story_scenes.js:226	Then why do you carry a light? Light wakes them.
+story_scenes.js:228	Show him the lantern.
+story_scenes.js:228	The Gravekeeper weakens.
+story_scenes.js:229	Say the name from the door.
+story_scenes.js:229	Requires: The Whispering Door
+story_scenes.js:229	You have not heard the name.
+story_scenes.js:230	Draw your weapon.
+story_scenes.js:230	A clean death.
+story_scenes.js:232	Aurel. Was that your name?
+story_scenes.js:233	I carry it so I can find my way back.
+story_scenes.js:234	GRAVEKEEPER
+story_scenes.js:234	...I remember a name. Was it mine?
+story_scenes.js:235	MARA
+story_scenes.js:235	Give him peace.
+story_scenes.js:236	GRAVEKEEPER
+story_scenes.js:236	Peace. Yes. I had a word for that once. It was smaller than this.
+story_scenes.js:237	THE GRAVEKEEPER
+story_scenes.js:237	KEEPER OF EMPTY GRAVES
+story_scenes.js:237	BOSS
+story_scenes.js:249	NARRATOR
+story_scenes.js:249	The Gravekeeper sinks to his knees. The light in his chest is going out.
+story_scenes.js:250	GRAVEKEEPER
+story_scenes.js:250	Do you... remember me?
+story_scenes.js:251	MARA
+story_scenes.js:251	Answer him. Names are the only thing the Hollow cannot digest.
+story_scenes.js:253	I will remember you.
+story_scenes.js:253	He will follow you to the fire.
+story_scenes.js:254	Rest. I will carry the rest.
+story_scenes.js:254	He will follow you to the fire.
+story_scenes.js:255	No. The dead should forget.
+story_scenes.js:255	+1 damage, +40 embers.
+story_scenes.js:257	NARRATOR
+story_scenes.js:257	He shrinks. The grave-iron falls away. What remains is small and grey and breathing, and it follows you to the fire.
+story_scenes.js:258	GRAVEKEEPER
+story_scenes.js:258	I had a name. You gave it back. I will keep it safe.
+story_scenes.js:259	MARA
+story_scenes.js:259	You gave him a name. Names are the only thing the Hollow cannot digest.
+story_scenes.js:260	NARRATOR
+story_scenes.js:260	You close his eyes. The grave-iron is warm in your hand. It fits better than it should.
+story_scenes.js:261	MARA
+story_scenes.js:261	He asked you to remember him.
+story_scenes.js:262	I remember. That is enough.
+story_scenes.js:263	MARA
+story_scenes.js:263	...Yes. That is what I am afraid of.
+story_scenes.js:264	MARA
+story_scenes.js:264	The stairs go up, not down. The camp is above the waterline. We should rest.
+story_scenes.js:265	MARA
+story_scenes.js:265	You will want to be stronger for what comes next.
+story_scenes.js:278	THE SAINT
+story_scenes.js:278	Little flame. Little flame. The garden is hungry.
+story_scenes.js:279	MARA
+story_scenes.js:279	He was a priest. He promised the city would be remembered. Then he ate the memories himself.
+story_scenes.js:280	ORIN
+story_scenes.js:280	The flowers are his congregation. Every one is a name. Do not let them touch you.
+story_scenes.js:281	THE SAINT
+story_scenes.js:281	We only wanted to keep them. We only wanted to keep them.
+story_scenes.js:283	Burn the flowers first.
+story_scenes.js:283	The Saint opens slowly.
+story_scenes.js:284	Speak to him.
+story_scenes.js:284	Lore. He may remember.
+story_scenes.js:285	Say nothing.
+story_scenes.js:285	Some prayers are private.
+story_scenes.js:287	Aurel sent me.
+story_scenes.js:288	THE SAINT
+story_scenes.js:288	Aurel... Aurel is the lid. We are the jar. Do not open the jar.
+story_scenes.js:289	THE SAINT
+story_scenes.js:289	THE GARDEN KEEPS WHAT THE RIVER COULD NOT.
+story_scenes.js:290	THE ROTTING SAINT
+story_scenes.js:290	THE GARDEN KEEPS ITS OWN
+story_scenes.js:290	BOSS
+story_scenes.js:301	NARRATOR
+story_scenes.js:301	The Saint comes apart like wet paper. Beneath him, the garden is still growing.
+story_scenes.js:302	MARA
+story_scenes.js:302	The rot is not evil. It is hungry. There is a difference, and it does not help.
+story_scenes.js:303	ORIN
+story_scenes.js:303	If we burn it, the names go with it. If we leave it, it will grow back. Either way, something ends.
+story_scenes.js:305	Burn the garden.
+story_scenes.js:305	+1 damage, +40 embers.
+story_scenes.js:306	Let it regrow.
+story_scenes.js:306	+1 heart, +trust.
+story_scenes.js:308	NARRATOR
+story_scenes.js:308	You put the torch to the roots. The flowers scream with a hundred voices, then are quiet. The air is cleaner. The silence is worse.
+story_scenes.js:309	MARA
+story_scenes.js:309	We will carry them. That is what the living are for.
+story_scenes.js:310	NARRATOR
+story_scenes.js:310	You step over the roots. Behind you, something small and green opens toward the dark, hungry and hopeful.
+story_scenes.js:311	MARA
+story_scenes.js:311	You let it live.
+story_scenes.js:312	It was not its fault it was hungry.
+story_scenes.js:313	MARA
+story_scenes.js:313	The camp is above the rot line. Come. The Ember Halls are next, and they will not be gentle.
+story_scenes.js:326	THE HOLLOW KING
+story_scenes.js:326	THE FIRST LAMPLIGHTER
+story_scenes.js:326	THE THRONE
+story_scenes.js:327	NARRATOR
+story_scenes.js:327	The throne is made of doors. Each one whispers.
+story_scenes.js:328	AUREL
+story_scenes.js:328	Another lantern. Another little sun. How many of you have come down here to kill me?
+story_scenes.js:329	MARA
+story_scenes.js:329	Aurel. It is me.
+story_scenes.js:330	AUREL
+story_scenes.js:330	...Mara? No. Mara drowned. I kept her. I kept everyone. That is what a king does.
+story_scenes.js:331	You call this keeping?
+story_scenes.js:332	AUREL
+story_scenes.js:332	I call it love with nowhere left to go.
+story_scenes.js:334	I will free you.
+story_scenes.js:334	Set { vow: free }
+story_scenes.js:335	I will end you.
+story_scenes.js:335	Set { vow: end }
+story_scenes.js:336	I do not know.
+story_scenes.js:336	Set { vow: unknown }
+story_scenes.js:338	AUREL
+story_scenes.js:338	Free. The word is so old it has forgotten its shape. Try it anyway.
+story_scenes.js:339	AUREL
+story_scenes.js:339	Then you are honest. I have always respected a blade that does not pretend to be a key.
+story_scenes.js:340	AUREL
+story_scenes.js:340	Good. Certainty is how I got here.
+story_scenes.js:341	AUREL
+story_scenes.js:341	Then come and find out what you are made of.
+story_scenes.js:342	THE HOLLOW KING
+story_scenes.js:342	THE LAST LAMPLIGHTER
+story_scenes.js:342	BOSS
+story_scenes.js:354	AUREL
+story_scenes.js:354	Do you hear them? Every name I swallowed is screaming at once.
+story_scenes.js:355	MARA
+story_scenes.js:355	Let them go.
+story_scenes.js:356	AUREL
+story_scenes.js:356	They will drown again. They will forget. I am the only thing between them and nothing.
+story_scenes.js:357	Then let me be the second thing.
+story_scenes.js:358	AUREL
+story_scenes.js:358	...You remind me of her. That is not a kindness.
+story_scenes.js:370	AUREL
+story_scenes.js:370	I have held this city so long that I have forgotten which heartbeat is mine.
+story_scenes.js:371	MARA
+story_scenes.js:371	Then let us remember it for you.
+story_scenes.js:372	AUREL
+story_scenes.js:372	Mara. If you are real... do not let me hurt you again.
+story_scenes.js:373	MARA
+story_scenes.js:373	I am real. I am the flame you left behind.
+story_scenes.js:374	AUREL
+story_scenes.js:374	Then burn, little sister. Burn it all down.
+story_scenes.js:387	NARRATOR
+story_scenes.js:387	The crown rolls across the floor. It is lighter than it looks. It is heavier than it looks.
+story_scenes.js:388	AUREL
+story_scenes.js:388	The crown... is heavy...
+story_scenes.js:389	MARA
+story_scenes.js:389	The lantern is ours again. We can end this. Or we can carry it.
+story_scenes.js:390	What happens if I put it down?
+story_scenes.js:391	MARA
+story_scenes.js:391	The Hollow ends. Everything it kept ends with it. Every memory of Veyra. Even me.
+story_scenes.js:392	MARA
+story_scenes.js:392	Or you can take it. It will fit. Crowns always do.
+story_scenes.js:394	Break the crown. Let it end.
+story_scenes.js:394	Ending: ASHES
+story_scenes.js:395	Take the crown.
+story_scenes.js:395	Ending: THE CROWN
+story_scenes.js:396	Give the lantern to Mara.
+story_scenes.js:397	Ending: DAWN
+story_scenes.js:399	You are not ready to give it back.
+story_scenes.js:403	Speak his true name.
+story_scenes.js:404	Ending: FORGOTTEN
+story_scenes.js:406	You do not know him well enough.
+story_scenes.js:419	ENDING
+story_scenes.js:419	ASHES
+story_scenes.js:419	THE CROWN BREAKS
+story_scenes.js:420	NARRATOR
+story_scenes.js:420	You bring the lantern down on the crown. It cracks like a bell. The sound goes on for a long time.
+story_scenes.js:421	NARRATOR
+story_scenes.js:421	The Hollow goes out like a lamp. The doors stop whispering. The city forgets itself.
+story_scenes.js:423	NARRATOR
+story_scenes.js:423	No one answers. There is only the sound of water finding its level.
+story_scenes.js:424	NARRATOR
+story_scenes.js:424	You climb out of Ashfall at dawn. The village is grey and quiet. The people look at you as if you are a stranger.
+story_scenes.js:425	NARRATOR
+story_scenes.js:425	No one remembers your name. You are alive. You are the only thing left that does.
+story_scenes.js:426	ASHES
+story_scenes.js:426	SURVIVED. FORGOTTEN.
+story_scenes.js:426	ENDING I OF IV
+story_scenes.js:434	ENDING
+story_scenes.js:434	THE CROWN
+story_scenes.js:434	THE KING IS DEAD
+story_scenes.js:435	NARRATOR
+story_scenes.js:435	You set the crown on your head. The voices are loud, then quiet, then yours.
+story_scenes.js:436	MARA
+story_scenes.js:436	Do not do this. Please.
+story_scenes.js:437	I will carry them. I am strong enough.
+story_scenes.js:438	NARRATOR
+story_scenes.js:438	Mara burns down to a single blue spark. It hovers before your eyes for a moment, like a question. Then it goes out.
+story_scenes.js:439	NARRATOR
+story_scenes.js:439	The throne is comfortable. It was made for someone exactly your size.
+story_scenes.js:440	NARRATOR
+story_scenes.js:440	A hundred years from now, another lantern will come down the stairs.
+story_scenes.js:441	AUREL
+story_scenes.js:441	Turn back. The graves are full.
+story_scenes.js:442	THE CROWN
+story_scenes.js:442	THE CYCLE CONTINUES.
+story_scenes.js:442	ENDING II OF IV
+story_scenes.js:450	ENDING
+story_scenes.js:450	DAWN
+story_scenes.js:450	THE LANTERN RETURNS
+story_scenes.js:451	NARRATOR
+story_scenes.js:451	You place the lantern in Mara\'s hands. She holds it the way she must have held it on the last night of Veyra.
+story_scenes.js:452	MARA
+story_scenes.js:452	I was never the light. I was just the one who stayed.
+story_scenes.js:453	That is what a light is.
+story_scenes.js:454	NARRATOR
+story_scenes.js:454	Aurel\'s chest opens. The city pours out: rooftops, rain, a red sun, a thousand names. They rise through the Hollow like sparks through a chimney.
+story_scenes.js:455	AUREL
+story_scenes.js:455	I can... put it down.
+story_scenes.js:456	MARA
+story_scenes.js:456	Then put it down, brother. I have you.
+story_scenes.js:457	NARRATOR
+story_scenes.js:457	The crown melts. The Hollow closes. Above, in Ashfall, the sky turns the color of a held breath, and the first real dawn in eleven days begins.
+story_scenes.js:458	NARRATOR
+story_scenes.js:458	Someone is laughing in the street. Someone else is crying. Both are remembering.
+story_scenes.js:459	DAWN
+story_scenes.js:459	THE CITY REMEMBERS. SO DO YOU.
+story_scenes.js:459	ENDING III OF IV
+story_scenes.js:467	ENDING
+story_scenes.js:467	FORGOTTEN
+story_scenes.js:467	THE NAME IS SPOKEN
+story_scenes.js:468	NARRATOR
+story_scenes.js:468	You kneel beside the dying king and say the name the door taught you.
+story_scenes.js:469	Aurel Vane.
+story_scenes.js:470	NARRATOR
+story_scenes.js:470	The crown opens. Not cracks. Opens, like a hand. Every name inside goes free at once.
+story_scenes.js:471	AUREL
+story_scenes.js:471	Oh. There they are.
+story_scenes.js:472	MARA
+story_scenes.js:473	NARRATOR
+story_scenes.js:473	The city exhales. Veyra rises out of the dark in one last clear image, complete and unbearably ordinary, and then it is gone.
+story_scenes.js:474	NARRATOR
+story_scenes.js:474	The world forgets Veyra. The Hollow ends. Mara fades with a smile that has no name left to hold it.
+story_scenes.js:475	NARRATOR
+story_scenes.js:475	You wake on the hill above Ashfall. The lantern in your hand is cold and empty. Your cheeks are wet.
+story_scenes.js:476	NARRATOR
+story_scenes.js:476	You do not remember why. You only know that something enormous has been forgiven.
+story_scenes.js:477	FORGOTTEN
+story_scenes.js:477	THE HOLLOW IS GONE. THE NAME REMAINS.
+story_scenes.js:477	ENDING IV OF IV
+story_scenes.js:486	MARA
+story_scenes.js:486	The fire will hold until dawn. Such as dawn is, down here.
+story_scenes.js:487	MARA
+story_scenes.js:487	You asked what I am. I was a lamplighter of Veyra. On the last night, I lit the lamps while the water rose.
+story_scenes.js:488	MARA
+story_scenes.js:488	My brother went into the dark to hold the city\'s memory. I have been holding the light ever since.
+story_scenes.js:489	Aurel. The door said his name.
+story_scenes.js:490	MARA
+story_scenes.js:490	Then you have heard him. He is still in there.
+story_scenes.js:491	MARA
+story_scenes.js:491	Aurel was not a tyrant. He was a man who could not bear to let a city go. I have had three hundred years to decide which is worse.
+story_scenes.js:492	MARA
+story_scenes.js:492	I still do not know.
+story_scenes.js:493	MARA
+story_scenes.js:493	The brand is quiet now. It is waiting. So am I.
+story_scenes.js:494	MARA
+story_scenes.js:494	You kept your name. I did not know how much I needed someone to do that.
+story_scenes.js:495	MARA
+story_scenes.js:495	You still do not trust me. That is all right. Trust is a thing you build out of better nights than this.
+story_scenes.js:496	MARA
+story_scenes.js:496	Rest. The dark is patient, but the fire is not.
+story_scenes.js:504	GRAVEKEEPER
+story_scenes.js:504	Small fire. Good fire. It remembers being a tree.
+story_scenes.js:505	Do you remember your name?
+story_scenes.js:506	GRAVEKEEPER
+story_scenes.js:506	You gave it to me. It is here. It is heavy and light at the same time. Like a child.
+story_scenes.js:507	GRAVEKEEPER
+story_scenes.js:507	The garden below is loud. It says my name wrong. I do not correct it.
+story_scenes.js:508	GRAVEKEEPER
+story_scenes.js:508	When you go down again, I will guard the fire. If the fire goes out, I will be very angry. Then I will be sad. Then I will be angry again.
+story_scenes.js:509	That is a good plan.
+story_scenes.js:510	GRAVEKEEPER
+story_scenes.js:510	I have many plans. Most of them are standing still.
+story_scenes.js:518	ORIN
+story_scenes.js:518	I have been reading the walls. They are extremely rude, but informative.
+story_scenes.js:519	What do they say?
+story_scenes.js:520	ORIN
+story_scenes.js:520	That the crown is a vessel made of names. Aurel poured Veyra into it to save the city from the water. The Hollow is what happens when a vessel forgets it is a vessel and starts believing it is a king.
+story_scenes.js:521	ORIN
+story_scenes.js:521	You saw the mirror. Then you know he did it for love. That is the worst kind of villain. It leaves you nothing to hate cleanly.
+story_scenes.js:522	ORIN
+story_scenes.js:522	I have also discovered that the campfire is an excellent place to think. I have discovered nothing else. Do not tell the Witch.
+story_scenes.js:523	ORIN
+story_scenes.js:523	When this is over, I would like to see the sun. I have read about it. I would like to check the sources.
+story_scenes.js:531	EMBER WITCH
+story_scenes.js:531	Do not look so surprised. Fire is welcome anywhere there is something to burn.
+story_scenes.js:532	Why are you helping us?
+story_scenes.js:533	EMBER WITCH
+story_scenes.js:533	Because the Hollow is a bad flame. It eats without heat. It remembers without love. I am a professional. I have standards.
+story_scenes.js:534	EMBER WITCH
+story_scenes.js:534	The brand suits you. It has stopped trying to crawl off your wrist, which is a compliment.
+story_scenes.js:535	EMBER WITCH
+story_scenes.js:535	You refused me. Good. The best candles are the ones that do not know they are candles.
+story_scenes.js:536	EMBER WITCH
+story_scenes.js:536	When you reach the throne, do not ask the king for permission. He has been giving it to himself for three hundred years.
+story_scenes.js:545	THE LAST CAMP
+story_scenes.js:545	A FIRE ABOVE THE WATERLINE
+story_scenes.js:545	REST
+story_scenes.js:546	MARA
+story_scenes.js:546	The fire is small, but it is ours. Sit. You have earned one quiet thing.
+story_scenes.js:547	MARA
+story_scenes.js:547	The Garden District is below the watermark. The rot there is old and patient. It grows toward anything that still remembers being warm.
+story_scenes.js:548	MARA
+story_scenes.js:548	Before we go, there are things you can do. Speak to whoever is still alive. Spend what you have carried. Then we descend.
+story_scenes.js:556	THE LAST CAMP
+story_scenes.js:556	A FIRE ABOVE THE ROT LINE
+story_scenes.js:556	REST
+story_scenes.js:557	NARRATOR
+story_scenes.js:557	The garden is quiet behind you. The fire has been waiting. It looks smaller than it did before.
+story_scenes.js:558	MARA
+story_scenes.js:558	You burned a saint. Or you let him keep growing. Either way, the rot remembers you now.
+story_scenes.js:559	MARA
+story_scenes.js:559	The Ember Halls are below this. The air there remembers burning. Every flame is somebody\'s last thought.
+story_scenes.js:560	ORIN
+story_scenes.js:560	I have made a map of the forge from memory. It is mostly guesswork and profanity, but the directions are sound.
+story_scenes.js:561	GRAVEKEEPER
+story_scenes.js:561	The fire says your name when you are not here. I tell it to be patient. It is not very good at patience.
+story_scenes.js:562	MARA
+story_scenes.js:562	Rest. Speak to whoever is still standing. Spend what the deep has given you. Then we go down one last time.
+story_play.js:20	MOON
+story_play.js:20	FLAME
+story_play.js:20	ROOT
+story_play.js:22	Hollow in the Mud
+story_play.js:22	The Sealed Step
+story_play.js:23	A Garden Under Glass
+story_play.js:23	The Last Procession
+story_play.js:23	Rot and Rain
+story_play.js:24	The Furnace Door
+story_play.js:24	When the Roof Came Down
+story_play.js:24	A Room of Mirrors
+story_play.js:25	The Name Below
+story_play.js:28	A voice in the mud repeats a nursery rhyme. It is your voice, but younger. It does not know it is dead.
+story_play.js:29	Someone counted the stairs as they drowned. They reached four hundred and nine. The count is still going.
+story_play.js:30	A gravekeeper polishes a headstone with his sleeve. The name has been scratched out, then written again, then scratched out.
+story_play.js:31	A woman presses flowers between the pages of a ledger. Every flower is labeled with a name. The ink is running.
+story_play.js:32	A procession walks through a drowned street, holding candles above the water. Their reflections do not match.
+story_play.js:33	A priest tells his congregation that the garden will keep them. The congregation has roots where their mouths should be.
+story_play.js:34	A furnace roars. A boy feeds it letters, one by one. Each letter makes the fire say a different name.
+story_play.js:35	The ceiling comes down. Someone is still laughing, because they thought the noise was applause.
+story_play.js:36	A mirror remembers a family at dinner. The table is set for five. Only one chair is occupied.
+story_play.js:37	A king sits on a throne of doors, listening. He has forgotten which side of the door he is on.
+story_play.js:70	CHAPTER 
+story_play.js:70	 · FLOOR 
+story_play.js:139	THE GRAVEKEEPER
+story_play.js:139	THE ROTTING SAINT
+story_play.js:139	THE HOLLOW KING
+story_play.js:322	THAT FLAME IS ALREADY BRIGHT.
+story_play.js:329	NOT ENOUGH EMBERS.
+story_play.js:341	 RAISED.
+story_play.js:459	MEMORY SHARD FOUND — THE WAY OPENS
+story_play.js:460	THE WAY BELOW IS OPEN
+story_play.js:493	THE SEAL REMEMBERS. WATCH.
+story_play.js:518	THE SEAL REJECTS YOU
+story_play.js:564	HOLD THE LIGHT — WAVE 1/3
+story_play.js:591	THE LIGHT FALTERS
+story_play.js:603	WAVE 
+story_play.js:622	RUN. THE DARK IS COMING.
+story_play.js:663	SEAL LIT — 
+story_play.js:693	THE DARK RECOILS
+story_play.js:701	THE COLLAPSE
+story_play.js:701	LIGHT THE SEALS — 
+story_play.js:701	E NEAR A SEAL · Q PUSHES THE DARK BACK
+story_play.js:703	THE SEALED MEMORY
+story_play.js:703	WATCH THE RUNES
+story_play.js:703	REPEAT THE RUNES — 
+story_play.js:703	STEP ON A RUNE TO SPEAK IT
+story_play.js:705	HOLD THE LIGHT
+story_play.js:705	WAVE 
+story_play.js:705	KEEP THE FIRE BURNING
+story_play.js:706	A SEAL HOLDS THE STAIRS
+story_play.js:706	CLEAR THE CHAMBER
+story_play.js:709	THE WAY DOWN IS THROUGH HIM
+story_play.js:711	THE WAY IS OPEN
+story_play.js:711	DESCEND
+story_play.js:712	THE LANTERN BELOW
+story_play.js:712	FIND THE STAIRS
+story_play.js:736	ECHO OF VEYRA — 
+story_play.js:736	A MEMORY
+story_play.js:797	THE GRAVEKEEPER
+story_play.js:797	THE ROTTING SAINT
+story_play.js:797	THE HOLLOW KING
+story_play.js:944	no event
+story_play.js:958	no boss
+story_play.js:965	no puzzle
+story_ui.js:13	Ashfall has lost its last light. You followed Mara, a lantern spirit, into the drowned city of Veyra. The Hollow is eating the names of the living, one memory at a time. The Gravekeeper waits at the bottom of the crypt.
+story_ui.js:14	The Gravekeeper is at rest, or something like it. Below the crypt, the Garden District is choked with a rot that keeps what it loves. A scholar named Orin has been suspended in amber since the city drowned. The Rotting Saint tends the garden.
+story_ui.js:15	The garden is behind you. The Ember Halls burn under the city, and the Hollow King sits on a throne made of doors. Mara has stopped pretending she does not know him. The last light is below.
+story_ui.js:20	DAWN
+story_ui.js:20	THE CITY REMEMBERS. SO DO YOU.
+story_ui.js:21	You gave the lantern back to Mara. Aurel put down the city he had carried for three hundred years, and the first real dawn in eleven days broke over Ashfall. Everyone remembered. So did you.
+story_ui.js:24	ASHES
+story_ui.js:24	SURVIVED. FORGOTTEN.
+story_ui.js:25	You broke the crown. The Hollow ended, and everything it had kept ended with it. Veyra, the Gravekeeper, Orin, Mara. You climbed out alive and nameless. The village looked at you as if you were a stranger.
+story_ui.js:28	THE CROWN
+story_ui.js:28	THE CYCLE CONTINUES.
+story_ui.js:29	You took the crown. The voices were loud, then quiet, then yours. Mara burned down to a blue spark and went out. The throne fitted you exactly. A hundred years from now, another lantern will come down the stairs.
+story_ui.js:32	FORGOTTEN
+story_ui.js:32	THE HOLLOW IS GONE. THE NAME REMAINS.
+story_ui.js:33	You spoke Aurel Vane\'s true name. The crown opened like a hand and every name inside went free. The world forgot Veyra, and Mara faded smiling. You woke on the hill with a cold lantern and no memory of why you were crying.
+story_ui.js:38	ASHFALL
+story_ui.js:38	A village built on the bones of a drowned city. Its lanterns are fed with memory; when the Hollow came, the flames began to eat the names of the people who lit them.
+story_ui.js:39	THE HOLLOW
+story_ui.js:39	Not a monster. A hunger that was once a promise. It eats memory, and what it cannot digest it keeps: names, rooms, the shape of a hand.
+story_ui.js:40	VEYRA
+story_ui.js:40	The city below. It drowned in a single night three hundred years ago. Its streets are still full of people who have forgotten they are dead.
+story_ui.js:41	MEMORY SEALS
+story_ui.js:41	The city locked its important memories behind rune-seals. A seal does not keep things safe. It keeps them still.
+story_ui.js:42	THE WHISPERING DOOR
+story_ui.js:42	A door with a hundred mouths. It remembers names and repeats them until someone answers. What answers is rarely the person who was called.
+story_ui.js:43	ORIN
+story_ui.js:43	Cartographer, archivist, reluctant immortal. He mapped the Hollow before it mapped him. The amber kept him alive and the rot kept the amber hungry.
+story_ui.js:44	THE EMBER CROWN
+story_ui.js:44	A vessel made of names. Aurel forged it to hold a city. A vessel that forgets it is a vessel begins to believe it is a king.
+story_ui.js:45	AUREL VANE
+story_ui.js:45	The first Lamplighter. On the night Veyra drowned he opened his chest and let the city pour in. He has been holding it ever since. He calls it love with nowhere left to go.
+story_ui.js:46	MARA
+story_ui.js:46	A lamplighter of Veyra. She lit the lamps while the water rose, and has been holding the light ever since. She is not a ghost. She is a flame that remembers being a woman.
+story_ui.js:47	THE GRAVEKEEPER
+story_ui.js:47	He guarded empty graves for three hundred years. He did not know he was dead. A name given freely is the only thing the Hollow cannot digest.
+story_ui.js:48	THE GARDEN DISTRICT
+story_ui.js:48	Veyra\'s old pleasure gardens. The flood brought rot, and the rot brought flowers. Every flower is a name. The garden is very proud of its collection.
+story_ui.js:49	THE ROT
+story_ui.js:49	A patient green hunger. It does not hate what it eats. It grows toward warm things because it wants to keep them. That is the whole of its theology.
+story_ui.js:50	THE ROTTING SAINT
+story_ui.js:50	A priest who promised his congregation they would be remembered. He ate their memories to keep them from the river. The garden is his church now, and the flowers are his choir.
+story_ui.js:51	THE EMBER HALLS
+story_ui.js:51	The forge of Veyra. Every flame in the halls is a memory burning down to its last thought. The Ember Witch tends the ones that still have something to say.
+story_ui.js:52	THE COLLAPSE
+story_ui.js:52	When the water reached the roots, the city came down a room at a time. The dark that follows is not water. It is the absence of the rooms that used to be there.
+story_ui.js:53	THE MIRROR OF VEYRA
+story_ui.js:53	It shows the last night, not the viewer. Aurel opened his chest. Mara shouted his name. The crown did not get forged. It grew.
+story_ui.js:54	THE THRONE OF DOORS
+story_ui.js:54	A seat made of every door that ever led into Veyra. Each one still whispers. The king has forgotten which side of the door he is on.
+story_ui.js:58	MARA
+story_ui.js:58	THE LANTERN SPIRIT
+story_ui.js:58	She has waited three hundred years for someone who still remembers how to carry a flame. She is not sure whether she wants to save you or be saved.
+story_ui.js:59	THE WHISPERING DOOR
+story_ui.js:59	A MOUTH IN THE MUD
+story_ui.js:59	It said a name: Aurel. It may have been a warning. It may have been an invitation.
+story_ui.js:60	THE GRAVEKEEPER
+story_ui.js:60	KEEPER OF EMPTY GRAVES
+story_ui.js:60	He asked to be remembered. You either gave him a name or gave him the quiet. Either way he followed you to the fire, or he did not.
+story_ui.js:61	ORIN
+story_ui.js:61	CARTOGRAPHER OF THE HOLLOW
+story_ui.js:61	Suspended in amber for thirty years, still taking notes. He wants to see the sun and check his sources.
+story_ui.js:62	THE EMBER WITCH
+story_ui.js:62	A PROFESSIONAL
+story_ui.js:62	She offered you a brand that would make the dark see its own reflection. She has standards. She also has a very good fire.
+story_ui.js:63	AUREL VANE
+story_ui.js:63	THE HOLLOW KING
+story_ui.js:63	Your enemy, or a man who could not let a city go. The difference matters more than it should.
+story_ui.js:64	THE ROTTING SAINT
+story_ui.js:64	THE GARDEN KEEPS ITS OWN
+story_ui.js:64	He wanted to keep everyone. He succeeded. That was the problem.
+story_ui.js:68	GOBLIN
+story_ui.js:68	Small, quick, and convinced that your pockets belong to it. Travels in bad company.
+story_ui.js:69	A zigzag of bad intentions. Hard to hit when it remembers to move sideways.
+story_ui.js:70	TINY ZOMBIE
+story_ui.js:70	Small enough to be sad. Hungry enough not to be.
+story_ui.js:71	SKELETON
+story_ui.js:71	What the crypt keeps when it cannot keep anything softer.
+story_ui.js:72	SWAMPY
+story_ui.js:72	A drowned thing that never learned it should have stopped moving.
+story_ui.js:73	MUDDY
+story_ui.js:73	The mud here has opinions. Most of them are about your ankles.
+story_ui.js:74	ORC WARRIOR
+story_ui.js:74	A soldier of a kingdom that no longer has a name. Still follows orders.
+story_ui.js:75	MASKED ORC
+story_ui.js:75	The mask is not for protection. It is so the Hollow cannot learn its face.
+story_ui.js:76	CHORT
+story_ui.js:76	A small horned thing that runs faster than it thinks.
+story_ui.js:77	ORC SHAMAN
+story_ui.js:77	Throws green fire and bad advice. Both are contagious.
+story_ui.js:78	ICE ZOMBIE
+story_ui.js:78	The cold preserved it. The cold is not a kindness.
+story_ui.js:79	NECROMANCER
+story_ui.js:79	A scholar of the wrong kind of memory. Keeps notes in other people\'s bones.
+story_ui.js:80	THE GRAVEKEEPER
+story_ui.js:80	Guardian of empty graves. He did not know he was dead. He knew he was lonely.
+story_ui.js:81	THE ROTTING SAINT
+story_ui.js:81	A garden with a man inside it. The flowers are the congregation.
+story_ui.js:82	THE HOLLOW KING
+story_ui.js:82	Aurel Vane, first Lamplighter. He held a city in his chest until it became a crown. He is very tired.
+story_ui.js:86	DAWN
+story_ui.js:86	Give the lantern to Mara. Trust her. Spare the Gravekeeper. Free Orin. Refuse the brand. See the truth. Carry all three shards.
+story_ui.js:87	ASHES
+story_ui.js:87	Break the crown. Let the Hollow end, and everything it kept end with it.
+story_ui.js:88	THE CROWN
+story_ui.js:88	Take the crown. Carry the city. Continue the cycle.
+story_ui.js:89	FORGOTTEN
+story_ui.js:89	Speak Aurel\'s true name. Requires the mirror\'s truth, Orin\'s friendship, and all three shards.
+story_ui.js:96	<div class="storyMeta"><span>CH. 
+story_ui.js:96	</span><span>FLOOR <b>
+story_ui.js:96	/10</b></span><span>EMBERS <b>
+story_ui.js:96	</b></span><span>SHARDS <b>
+story_ui.js:96	/3</b></span><span>CYCLE <b>
+story_ui.js:100	MARA
+story_ui.js:100	The lantern spirit
+story_ui.js:101	GRAVEKEEPER
+story_ui.js:101	Keeper of empty graves
+story_ui.js:102	ORIN
+story_ui.js:102	Cartographer of the Hollow
+story_ui.js:103	EMBER WITCH
+story_ui.js:103	A professional, warming her hands
+story_ui.js:122	<div class="chapterCard"><div class="ccK">THE LANTERN IS QUIET</div><div class="ccT">
+story_ui.js:122	AN ENDING
+story_ui.js:122	</div><div class="ccD">The story is finished. The epilogue is waiting. Begin another cycle when you are ready to descend again.</div></div>
+story_ui.js:124	<div class="chapterCard"><div class="ccK">THE LAST CAMP · CHAPTER 
+story_ui.js:124	</div><div class="ccT">
+story_ui.js:124	</div><div class="ccD">A fire above the waterline. Embers to spend. People to talk to. Then down again, into the next chapter.</div></div>
+story_ui.js:126	<div class="chapterCard"><div class="ccK">CHAPTER 
+story_ui.js:126	 · FLOOR 
+story_ui.js:126	/10</div><div class="ccT">
+story_ui.js:126	</div><div class="ccD">
+story_ui.js:128	<div class="chapterCard"><div class="ccK">A STORY OF MEMORY AND ASH</div><div class="ccT">THE LANTERN BELOW</div><div class="ccD">Ashfall has not seen a dawn in eleven days. The last lantern is dying. Beneath the village, the drowned city of Veyra is still remembering. Something down there has been eating the names of the living.</div></div>
+story_ui.js:131	<div class="storyTag">STORY MODE</div>
+story_ui.js:131	<div class="storyMeta"><span>3 CHAPTERS</span><span>10 FLOORS</span><span>4 ENDINGS</span><span>ONE LANTERN</span></div>
+story_ui.js:132	<div class="menuMeta"><span>ENDINGS <b>
+story_ui.js:132	<span>BEST <b>
+story_ui.js:135	EPILOGUE — 
+story_ui.js:135	THE END
+story_ui.js:135	CONTINUE — THE LAST CAMP
+story_ui.js:135	CONTINUE — FLOOR 
+story_ui.js:136	NEW STORY
+story_ui.js:137	NEW STORY
+story_ui.js:138	JOURNAL
+story_ui.js:139	CLASSIC RUN
+story_ui.js:140	MULTIPLAYER
+story_ui.js:141	MORE
+story_ui.js:145	THE LANTERN BELOW
+story_ui.js:146	<div class="warnline">PIXEL VIOLENCE - 3 GORE LEVELS</div>
+story_ui.js:148	CREATED BY SANCIOPANZA — <a href="https://github.com/SancioPanza88" target="_blank" rel="noopener">GITHUB</a> — A STORY MODE FOR HOLLOWDEEP
+story_ui.js:156	CHOOSE YOUR LANTERN
+story_ui.js:157	THE STORY BEGINS AT ASHFALL
+story_ui.js:159	<div class="tx ac">
+story_ui.js:159	</div><div class="tx dim">STARTS WITH: 
+story_ui.js:159	</div><div class="storyMeta"><span>ONE HERO</span><span>10 FLOORS</span><span>YOUR NAME MATTERS</span></div>
+story_ui.js:161	BEGIN THE STORY
+story_ui.js:163	BACK
+story_ui.js:169	BEGIN AGAIN?
+story_ui.js:170	<div class="tx">A NEW STORY WILL OVERWRITE YOUR CURRENT DESCENT.<br><span class="dim">Your ending gallery is kept. The deep does not mind starting over.</span></div><div class="storyTag">THE LANTERN REMEMBERS</div>
+story_ui.js:172	BEGIN AGAIN
+story_ui.js:173	CANCEL
+story_ui.js:179	MORE
+story_ui.js:180	<div class="tx">EVERYTHING ELSE IN THE DEEP.</div><div class="storyMeta"><span>STORY MODE</span><span>CLASSIC</span><span>CO-OP</span></div>
+story_ui.js:182	MULTIPLAYER
+story_ui.js:183	HOW TO PLAY
+story_ui.js:184	OPTIONS
+story_ui.js:185	CREDITS
+story_ui.js:186	CONTENT WARNING
+story_ui.js:187	BACK
+story_ui.js:193	THE ORIGINAL ROGUELIKE
+story_ui.js:194	BACK TO STORY
+story_ui.js:203	<button type="button" class="npc" data-npc="
+story_ui.js:203	"><span class="nn">
+story_ui.js:204	<br><span class="ns">
+story_ui.js:204	</span></span><span class="uc">TALK</span></button>
+story_ui.js:213	<i class="
+story_ui.js:214	<button type="button" class="up
+story_ui.js:214	 max
+story_ui.js:214	 no
+story_ui.js:214	" data-up="
+story_ui.js:215	<span><span class="un">
+story_ui.js:215	</span><div class="pips">
+story_ui.js:216	<span class="ns">
+story_ui.js:217	<span class="uc">
+story_ui.js:220	<div class="campHead"><span>CHAPTER <b>
+story_ui.js:220	</b> — 
+story_ui.js:221	<span>FLOOR <b>
+story_ui.js:222	<span>EMBERS <b>
+story_ui.js:223	<span>SHARDS <b>
+story_ui.js:225	<div class="tx ac" style="font-size:.78cqw">
+story_ui.js:228	THE LAST CAMP
+story_ui.js:229	<div class="campArtWrap"><canvas id="campArt" width="352" height="84"></canvas></div>
+story_ui.js:230	<div class="campGrid">
+story_ui.js:231	<div class="campCol"><div class="campLbl">AT THE FIRE</div>
+story_ui.js:232	<div class="campCol"><div class="campLbl">SPEND EMBERS</div>
+story_ui.js:234	<div class="tx dim" style="font-size:.7cqw">1–4 SPEND EMBERS · 5–8 SPEAK · REST HEALS YOU BETWEEN CHAPTERS</div>
+story_ui.js:236	DESCEND
+story_ui.js:237	JOURNAL
+story_ui.js:238	OPTIONS
+story_ui.js:239	SAVE & QUIT
+story_ui.js:246	<div class="jrEntry
+story_ui.js:246	 lock
+story_ui.js:246	NOT YET REMEMBERED.
+story_ui.js:257	<div class="jrn">
+story_ui.js:258	<div class="jrIntro">
+story_ui.js:258	THE STORY IS FINISHED. THE LANTERN REMEMBERS.
+story_ui.js:258	CHAPTER 
+story_ui.js:258	NO STORY HAS BEEN WRITTEN YET.
+story_ui.js:259	<div class="storyMeta"><span>KILLS <b>
+story_ui.js:259	</b></span><span>DEATHS <b>
+story_ui.js:259	</b></span><span>ENDINGS <b>
+story_ui.js:259	/4</b></span><span>CYCLE <b>
+story_ui.js:261	<h3>STORY SO FAR</h3>
+story_ui.js:263	<div class="jrEntry"><b>
+story_ui.js:264	<div class="jrEntry"><b>THE DESCENT</b><span>
+story_ui.js:266	<div class="jrEntry lock"><b>???</b><span>BEGIN A STORY TO FILL THESE PAGES.</span></div>
+story_ui.js:269	<h3>THE DEEP — LORE <span style="color:#8f84a8">(
+story_ui.js:272	<h3>PEOPLE <span style="color:#8f84a8">(
+story_ui.js:275	<h3>BESTIARY <span style="color:#8f84a8">(
+story_ui.js:278	<h3>ECHOES OF VEYRA <span style="color:#8f84a8">(
+story_ui.js:281	FLOOR 
+story_ui.js:281	AN ECHO
+story_ui.js:281	AN ECHO STILL WAITS ON FLOOR 
+story_ui.js:284	<h3>MEMORY SHARDS <span style="color:#8f84a8">(
+story_ui.js:286	THE SEALED MEMORY
+story_ui.js:286	A city counting its dead behind a rune-seal. Found on floor 2.
+story_ui.js:287	HOLD THE LIGHT
+story_ui.js:287	The last procession of Veyra, still walking. Found on floor 5.
+story_ui.js:288	THE COLLAPSE
+story_ui.js:288	The night the roof came down, remembered by the ceiling. Found on floor 8.
+story_ui.js:292	<div class="jrEntry
+story_ui.js:292	 lock
+story_ui.js:292	"><b class="jrShard">
+story_ui.js:292	A MEMORY SHARD IS STILL BURIED SOMEWHERE BELOW.
+story_ui.js:295	<h3>ENDINGS <span style="color:#8f84a8">(
+story_ui.js:295	/4)</span></h3><div class="endRow">
+story_ui.js:296	<span class="endChip
+story_ui.js:296	 got
+story_ui.js:301	<div class="jrEntry"><b>THE LANTERN\'S ACCOUNT</b><span>CYCLE 
+story_ui.js:302	 · KILLS 
+story_ui.js:303	 · DEATHS 
+story_ui.js:304	 · EMBERS 
+story_ui.js:305	 · SHARDS 
+story_ui.js:306	 · ENDINGS 
+story_ui.js:310	JOURNAL
+story_ui.js:312	BACK
+story_ui.js:327	<span class="endChip
+story_ui.js:327	 got
+story_ui.js:328	<div class="epiStats">
+story_ui.js:331	<b>ENEMIES SLAIN</b><span>
+story_ui.js:333	<b>MEMORY SHARDS</b><span>
+story_ui.js:334	<b>EMBERS CARRIED</b><span>
+story_ui.js:335	<b>ENDINGS FOUND</b><span>
+story_ui.js:336	<b>THE LANTERN</b><span>
+story_ui.js:336	RETURNED
+story_ui.js:336	EMPTY
+story_ui.js:336	WORN
+story_ui.js:336	BROKEN
+story_ui.js:340	<div class="epiHero">
+story_ui.js:340	</div><div class="epiSub">
+story_ui.js:341	<div class="campArtWrap"><canvas id="epiArt" width="352" height="84"></canvas></div>
+story_ui.js:342	<div class="tx">
+story_ui.js:343	<div class="endRow">
+story_ui.js:344	<div class="tx dim">THE DEEP IS QUIET. FOR NOW.</div>
+story_ui.js:346	NEW CYCLE
+story_ui.js:347	JOURNAL
+story_ui.js:348	MAIN MENU
+story_ui.js:359	THE LANTERN GUTTERS
+story_ui.js:360	<div class="tx">YOU FELL ON FLOOR 
+story_ui.js:360	/10<br><span class="dim">CHAPTER 
+story_ui.js:361	<div class="storyMeta"><span>DEATHS <b>
+story_ui.js:361	</b></span><span>SHARDS <b>
+story_ui.js:361	/3</b></span><span>EMBERS <b>
+story_ui.js:362	<div class="tx ac">YOU WILL RISE AT THE START OF FLOOR 
+story_ui.js:363	<div class="tx dim">The deep keeps what it catches. The lantern does not.</div>
+story_ui.js:365	RISE AGAIN
+story_ui.js:366	JOURNAL
+story_ui.js:367	MAIN MENU
+story_ui.js:375	PAUSED
+story_ui.js:376	<div class="tx dim">THE DEEP DOES NOT PAUSE. IT ONLY WAITS.</div>
+story_ui.js:378	RESUME
+story_ui.js:379	JOURNAL
+story_ui.js:380	OPTIONS
+story_ui.js:381	SAVE & QUIT
+story_ui.js:469	LANTERN PULSE
+story_ui.js:469	<br>Burn the dark back. Damages nearby enemies.<br>Pushes the collapse away.
+story_ui.js:491	6px 'Press Start 2P',monospace
+story_render.js:334	WATCH THE RUNES
+story_render.js:334	SPEAK THE RUNES  
+story_render.js:420	ECHO
+story_render.js:445	THE LANTERN
+story_render.js:598	E: LIGHT THE SEAL
+story_render.js:602	ECHO OF VEYRA
+story_render.js:602	WALK INTO IT
+story_render.js:668	7px 'Press Start 2P',monospace
+story_render.js:670	6px 'Press Start 2P',monospace

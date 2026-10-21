@@ -1,0 +1,641 @@
+DAWN
+ASHES
+THE CROWN
+FORGOTTEN
+WHAT THE MUD KEEPS
+THE GRAVEKEEPER
+THE ROTTING SAINT
+THE EMBER CROWN
+THE HOLLOW KING
+VITALITY
++1 heart
+EDGE
++1 damage
+SWIFTNESS
+speed & recovery
+LANTERN
+stronger pulse
+THE WHISPERING DOOR
+THE SEALED MEMORY
+THE RESIN SCHOLAR
+HOLD THE LIGHT
+THE EMBER WITCH
+THE COLLAPSE
+THE MIRROR OF VEYRA
+[story] missing scene
+EMBER WITCH
+THE SAINT
+THE DOOR
+NARRATOR
+ locked
+ on
+HOLLOWDEEP
+THE LANTERN BELOW
+A STORY OF MEMORY AND ASH
+Ashfall has not seen a dawn in eleven days.
+The lanterns went out one by one. Last night, the last one began to die.
+MARA
+You came. I was beginning to think the dark had eaten your name too.
+Are you... the light?
+A memory of one. My name is Mara. I have waited a long time for someone who still remembers how to carry a flame.
+For the village.
+For my sister. The Hollow took her.
+For the truth.
+Then we will bring them a dawn, or we will die trying.
+Ah. The one it took. I will help you remember her. That is what the lantern is for.
+Truth is a blade with two edges. Carry it carefully.
+Below us is Veyra. A city that drowned in a single night. Its memories are still down there, rotting.
+The Hollow eats memory. It has already eaten the names of everyone in your village. Except yours. Except mine.
+I trust you, Mara.
+I trust no one.
+Good. Then we will be afraid together.
+Wise. Keep the lantern between us, then. Light is a poor thing to trust blindly.
+There is a king at the bottom. The first Lamplighter. He has worn the Hollow like a crown for three hundred years.
+End him, and the Hollow ends. That is the whole of it.
+And if he does not want to end?
+...Then you will have to decide what he is.
+CHAPTER I
+THE DESCENT
+CHAPTER II
+THE GARDEN DISTRICT
+This was the Garden District. The water brought rot, and the rot brought flowers.
+Something is writing in the silt ahead. It has been writing for a long time.
+The Gravekeeper spoke of a scholar. If anyone is still keeping notes down here, it will be him.
+Notes? In this place?
+Memory is a kind of writing. The Hollow is a kind of erasing. Perhaps he thought he could outwrite it.
+Stay close. The flowers are listening.
+CHAPTER III
+THE FORGE OF VEYRA
+The Ember Halls. Every flame here is a memory burning down to its last thought.
+ORIN
+Aurel forged the crown in this hall. His sister lit the furnace. The records are... somewhat singed.
+He was not trying to become a god. He was trying to build a vessel large enough to hold a city.
+The furnace is still warm. That means something down here is still remembering.
+Warm? It is furious. There is a difference, little candle.
+You smell of the surface. Of rain. Of people who still believe the sun is a promise.
+We are here for the crown.
+Everyone is. The crown is downstairs, wearing a king. Take a brand before you go. It will keep the dark from taking you.
+And the price?
+The crown will know its own. That is all. That is everything.
+Do not listen to her.
+She would say that. She is a candle that has already burned down to the wick.
+THE LAST LIGHT IS BELOW
+A MEMORY THAT REFUSES TO CLOSE
+SECRET
+A door stands in the mud where no door should be. Its wood is a hundred mouths, all closed.
+Do not touch it. It remembers names. It will use yours.
+It said a name.
+An old one. Listen, and it will cost you. Seal it, and it will cost you something else.
+Listen to the door.
+-1 heart, +25 embers, a memory
+Seal it with your lantern.
++1 max heart
+Walk away.
+Some doors should stay shut.
+The mouths open. You see white towers and a red sun. A woman in a lamplighter coat is laughing. Then the water comes.
+You heard the city. Did it say his name again?
+Aurel. Who is Aurel?
+Someone I failed to save. Leave it.
+You press the lantern to the wood. The mouths close one by one, sighing like wet leaves. Something warm stays in your chest.
+You did not listen. That was kind. Kindness is not always wisdom, but it is rarer.
+Good. Some doors are better left as doors.
+Behind you, the mud closes over the threshold. The deep goes on.
+A MAN SUSPENDED IN AMBER
+THE GARDEN
+A man hangs inside a cocoon of amber, pen still moving.
+Ah. A living one. Splendid. Could you - carefully - not touch the resin with your bare hands?
+He has been here since before the flood. The rot keeps him alive. It may also be the only thing holding him together.
+Orin. Cartographer, archivist, reluctant immortal. I have mapped every vein of the Hollow. I can help you, if you help me.
+But the resin is also food for the rot. Break it, and I will need something of yours to keep standing.
+Free him. (-1 heart)
+Orin joins you. He knows the way.
+Take the relic in his hands.
++1 damage. The amber dims.
+Ask what he knows.
+Lore, +10 embers. Leave him.
+You crack the amber with the butt of your weapon. Orin falls into your arms, cold and laughing. The cocoon takes a little of your warmth as payment.
+Oh, that is much better. I have not seen my own hands in thirty years. They are still holding a pen. Good.
+The crown is not a crown. It is a contract, written in names. Aurel signed it in his own blood.
+You prise the relic from his fingers. It is a small brass compass with no needle. The amber dims. His pen stops.
+You could have saved him.
+I saved us.
+...Yes. That is what I am afraid of.
+The Hollow is not a monster. It is a hunger that was once a promise. The king is the promise. The hunger is the price. Go carefully.
+He will still be here when we come back. If there is a back.
+Behind the cocoon, something green and patient turns toward the sound of your breathing.
+A BRAND FOR THE DARK
+THE FORGE
+Back so soon? You have the look of someone who has been arguing with a candle.
+Do not call me that.
+I will call you what you are. A flame that remembers being a woman.
+Now. The offer. One mark, and the Hollow will never take you. The dark will look at you and see its own reflection.
+What happens to me?
+You become difficult to forget. Also difficult to love. A fair trade, most days.
+She is not lying. She is not telling the whole truth either.
+Take the Ember Brand.
++1 heart, +1 damage. The Dawn will close.
++20 embers. Keep your name.
+Ask what the crown is.
+The crown is a vessel. Aurel poured a city into it. A city is heavy. A city is loud. After three hundred years, he is less a king than a lid.
+Then help us open it.
+I am helping. I am offering you a handle.
+The brand sinks into your wrist. It does not hurt. It remembers hurting, somewhere far away, and lends you the memory.
+You let it mark you. Now it can find you.
+Then it will find me standing.
+You kept your name.
+For now. Names are heavy things. You will tire.
+The forge breathes. Somewhere below, a crown turns toward you, curious.
+THE NIGHT THE CITY DROWNED
+THE HALL OF NAMES
+A mirror stands upright in the ash. It does not show you.
+It shows the last night. I have never dared.
+You were there.
+I was the one who lit the lamps while the water came. My brother went into the dark to hold the city. I have been holding the light ever since.
+Touch the mirror.
+Learn the truth. This will matter.
+Shatter it.
++1 max heart. Mara will remember alone.
+Leave it.
+Some mirrors are doors.
+A man in a lamplighter coat stands in a drowning street. A woman with a lantern shouts his name.
+AUREL
+Mara! Take the light! I can hold the rest!
+He opens his chest. The city pours in. The crown is not forged. It grows.
+...He said he could hold it.
+He did.
+Then why is he still holding it?
+The mirror breaks into a hundred drowned rooms. Something in your chest grows harder, and heavier, and will not break.
+You did not have to see it. I did.
+I know.
+Then we go on without it. We have enough ghosts.
+Far below, the throne is waiting.
+GRAVEKEEPER
+Turn back. The graves are full.
+He has been guarding empty graves since the flood. He does not know he is dead.
+I am not here to rob them.
+Then why do you carry a light? Light wakes them.
+Show him the lantern.
+The Gravekeeper weakens.
+Say the name from the door.
+Requires: The Whispering Door
+You have not heard the name.
+Draw your weapon.
+A clean death.
+Aurel. Was that your name?
+I carry it so I can find my way back.
+...I remember a name. Was it mine?
+Give him peace.
+Peace. Yes. I had a word for that once. It was smaller than this.
+KEEPER OF EMPTY GRAVES
+BOSS
+The Gravekeeper sinks to his knees. The light in his chest is going out.
+Do you... remember me?
+Answer him. Names are the only thing the Hollow cannot digest.
+I will remember you.
+He will follow you to the fire.
+Rest. I will carry the rest.
+No. The dead should forget.
++1 damage, +40 embers.
+He shrinks. The grave-iron falls away. What remains is small and grey and breathing, and it follows you to the fire.
+I had a name. You gave it back. I will keep it safe.
+You gave him a name. Names are the only thing the Hollow cannot digest.
+You close his eyes. The grave-iron is warm in your hand. It fits better than it should.
+He asked you to remember him.
+I remember. That is enough.
+The stairs go up, not down. The camp is above the waterline. We should rest.
+You will want to be stronger for what comes next.
+Little flame. Little flame. The garden is hungry.
+He was a priest. He promised the city would be remembered. Then he ate the memories himself.
+The flowers are his congregation. Every one is a name. Do not let them touch you.
+We only wanted to keep them. We only wanted to keep them.
+Burn the flowers first.
+The Saint opens slowly.
+Speak to him.
+Lore. He may remember.
+Say nothing.
+Some prayers are private.
+Aurel sent me.
+Aurel... Aurel is the lid. We are the jar. Do not open the jar.
+THE GARDEN KEEPS WHAT THE RIVER COULD NOT.
+THE GARDEN KEEPS ITS OWN
+The Saint comes apart like wet paper. Beneath him, the garden is still growing.
+The rot is not evil. It is hungry. There is a difference, and it does not help.
+If we burn it, the names go with it. If we leave it, it will grow back. Either way, something ends.
+Burn the garden.
+Let it regrow.
++1 heart, +trust.
+You put the torch to the roots. The flowers scream with a hundred voices, then are quiet. The air is cleaner. The silence is worse.
+We will carry them. That is what the living are for.
+You step over the roots. Behind you, something small and green opens toward the dark, hungry and hopeful.
+You let it live.
+It was not its fault it was hungry.
+The camp is above the rot line. Come. The Ember Halls are next, and they will not be gentle.
+THE FIRST LAMPLIGHTER
+THE THRONE
+The throne is made of doors. Each one whispers.
+Another lantern. Another little sun. How many of you have come down here to kill me?
+Aurel. It is me.
+...Mara? No. Mara drowned. I kept her. I kept everyone. That is what a king does.
+You call this keeping?
+I call it love with nowhere left to go.
+I will free you.
+Set { vow: free }
+I will end you.
+Set { vow: end }
+I do not know.
+Set { vow: unknown }
+Free. The word is so old it has forgotten its shape. Try it anyway.
+Then you are honest. I have always respected a blade that does not pretend to be a key.
+Good. Certainty is how I got here.
+Then come and find out what you are made of.
+THE LAST LAMPLIGHTER
+Do you hear them? Every name I swallowed is screaming at once.
+Let them go.
+They will drown again. They will forget. I am the only thing between them and nothing.
+Then let me be the second thing.
+...You remind me of her. That is not a kindness.
+I have held this city so long that I have forgotten which heartbeat is mine.
+Then let us remember it for you.
+Mara. If you are real... do not let me hurt you again.
+I am real. I am the flame you left behind.
+Then burn, little sister. Burn it all down.
+The crown rolls across the floor. It is lighter than it looks. It is heavier than it looks.
+The crown... is heavy...
+The lantern is ours again. We can end this. Or we can carry it.
+What happens if I put it down?
+The Hollow ends. Everything it kept ends with it. Every memory of Veyra. Even me.
+Or you can take it. It will fit. Crowns always do.
+Break the crown. Let it end.
+Ending: ASHES
+Take the crown.
+Ending: THE CROWN
+Give the lantern to Mara.
+Ending: DAWN
+You are not ready to give it back.
+Speak his true name.
+Ending: FORGOTTEN
+You do not know him well enough.
+ENDING
+THE CROWN BREAKS
+You bring the lantern down on the crown. It cracks like a bell. The sound goes on for a long time.
+The Hollow goes out like a lamp. The doors stop whispering. The city forgets itself.
+No one answers. There is only the sound of water finding its level.
+You climb out of Ashfall at dawn. The village is grey and quiet. The people look at you as if you are a stranger.
+No one remembers your name. You are alive. You are the only thing left that does.
+SURVIVED. FORGOTTEN.
+ENDING I OF IV
+THE KING IS DEAD
+You set the crown on your head. The voices are loud, then quiet, then yours.
+Do not do this. Please.
+I will carry them. I am strong enough.
+Mara burns down to a single blue spark. It hovers before your eyes for a moment, like a question. Then it goes out.
+The throne is comfortable. It was made for someone exactly your size.
+A hundred years from now, another lantern will come down the stairs.
+THE CYCLE CONTINUES.
+ENDING II OF IV
+THE LANTERN RETURNS
+You place the lantern in Mara\'s hands. She holds it the way she must have held it on the last night of Veyra.
+I was never the light. I was just the one who stayed.
+That is what a light is.
+Aurel\'s chest opens. The city pours out: rooftops, rain, a red sun, a thousand names. They rise through the Hollow like sparks through a chimney.
+I can... put it down.
+Then put it down, brother. I have you.
+The crown melts. The Hollow closes. Above, in Ashfall, the sky turns the color of a held breath, and the first real dawn in eleven days begins.
+Someone is laughing in the street. Someone else is crying. Both are remembering.
+THE CITY REMEMBERS. SO DO YOU.
+ENDING III OF IV
+THE NAME IS SPOKEN
+You kneel beside the dying king and say the name the door taught you.
+Aurel Vane.
+The crown opens. Not cracks. Opens, like a hand. Every name inside goes free at once.
+Oh. There they are.
+The city exhales. Veyra rises out of the dark in one last clear image, complete and unbearably ordinary, and then it is gone.
+The world forgets Veyra. The Hollow ends. Mara fades with a smile that has no name left to hold it.
+You wake on the hill above Ashfall. The lantern in your hand is cold and empty. Your cheeks are wet.
+You do not remember why. You only know that something enormous has been forgiven.
+THE HOLLOW IS GONE. THE NAME REMAINS.
+ENDING IV OF IV
+The fire will hold until dawn. Such as dawn is, down here.
+You asked what I am. I was a lamplighter of Veyra. On the last night, I lit the lamps while the water rose.
+My brother went into the dark to hold the city\'s memory. I have been holding the light ever since.
+Aurel. The door said his name.
+Then you have heard him. He is still in there.
+Aurel was not a tyrant. He was a man who could not bear to let a city go. I have had three hundred years to decide which is worse.
+I still do not know.
+The brand is quiet now. It is waiting. So am I.
+You kept your name. I did not know how much I needed someone to do that.
+You still do not trust me. That is all right. Trust is a thing you build out of better nights than this.
+Rest. The dark is patient, but the fire is not.
+Small fire. Good fire. It remembers being a tree.
+Do you remember your name?
+You gave it to me. It is here. It is heavy and light at the same time. Like a child.
+The garden below is loud. It says my name wrong. I do not correct it.
+When you go down again, I will guard the fire. If the fire goes out, I will be very angry. Then I will be sad. Then I will be angry again.
+That is a good plan.
+I have many plans. Most of them are standing still.
+I have been reading the walls. They are extremely rude, but informative.
+What do they say?
+That the crown is a vessel made of names. Aurel poured Veyra into it to save the city from the water. The Hollow is what happens when a vessel forgets it is a vessel and starts believing it is a king.
+You saw the mirror. Then you know he did it for love. That is the worst kind of villain. It leaves you nothing to hate cleanly.
+I have also discovered that the campfire is an excellent place to think. I have discovered nothing else. Do not tell the Witch.
+When this is over, I would like to see the sun. I have read about it. I would like to check the sources.
+Do not look so surprised. Fire is welcome anywhere there is something to burn.
+Why are you helping us?
+Because the Hollow is a bad flame. It eats without heat. It remembers without love. I am a professional. I have standards.
+The brand suits you. It has stopped trying to crawl off your wrist, which is a compliment.
+You refused me. Good. The best candles are the ones that do not know they are candles.
+When you reach the throne, do not ask the king for permission. He has been giving it to himself for three hundred years.
+THE LAST CAMP
+A FIRE ABOVE THE WATERLINE
+REST
+The fire is small, but it is ours. Sit. You have earned one quiet thing.
+The Garden District is below the watermark. The rot there is old and patient. It grows toward anything that still remembers being warm.
+Before we go, there are things you can do. Speak to whoever is still alive. Spend what you have carried. Then we descend.
+A FIRE ABOVE THE ROT LINE
+The garden is quiet behind you. The fire has been waiting. It looks smaller than it did before.
+You burned a saint. Or you let him keep growing. Either way, the rot remembers you now.
+The Ember Halls are below this. The air there remembers burning. Every flame is somebody\'s last thought.
+I have made a map of the forge from memory. It is mostly guesswork and profanity, but the directions are sound.
+The fire says your name when you are not here. I tell it to be patient. It is not very good at patience.
+Rest. Speak to whoever is still standing. Spend what the deep has given you. Then we go down one last time.
+MOON
+FLAME
+ROOT
+Hollow in the Mud
+The Sealed Step
+A Garden Under Glass
+The Last Procession
+Rot and Rain
+The Furnace Door
+When the Roof Came Down
+A Room of Mirrors
+The Name Below
+A voice in the mud repeats a nursery rhyme. It is your voice, but younger. It does not know it is dead.
+Someone counted the stairs as they drowned. They reached four hundred and nine. The count is still going.
+A gravekeeper polishes a headstone with his sleeve. The name has been scratched out, then written again, then scratched out.
+A woman presses flowers between the pages of a ledger. Every flower is labeled with a name. The ink is running.
+A procession walks through a drowned street, holding candles above the water. Their reflections do not match.
+A priest tells his congregation that the garden will keep them. The congregation has roots where their mouths should be.
+A furnace roars. A boy feeds it letters, one by one. Each letter makes the fire say a different name.
+The ceiling comes down. Someone is still laughing, because they thought the noise was applause.
+A mirror remembers a family at dinner. The table is set for five. Only one chair is occupied.
+A king sits on a throne of doors, listening. He has forgotten which side of the door he is on.
+CHAPTER 
+ · FLOOR 
+THAT FLAME IS ALREADY BRIGHT.
+NOT ENOUGH EMBERS.
+ RAISED.
+MEMORY SHARD FOUND — THE WAY OPENS
+THE WAY BELOW IS OPEN
+THE SEAL REMEMBERS. WATCH.
+THE SEAL REJECTS YOU
+HOLD THE LIGHT — WAVE 1/3
+THE LIGHT FALTERS
+WAVE 
+RUN. THE DARK IS COMING.
+SEAL LIT — 
+THE DARK RECOILS
+LIGHT THE SEALS — 
+E NEAR A SEAL · Q PUSHES THE DARK BACK
+WATCH THE RUNES
+REPEAT THE RUNES — 
+STEP ON A RUNE TO SPEAK IT
+KEEP THE FIRE BURNING
+A SEAL HOLDS THE STAIRS
+CLEAR THE CHAMBER
+THE WAY DOWN IS THROUGH HIM
+THE WAY IS OPEN
+DESCEND
+FIND THE STAIRS
+ECHO OF VEYRA — 
+A MEMORY
+no event
+no boss
+no puzzle
+Ashfall has lost its last light. You followed Mara, a lantern spirit, into the drowned city of Veyra. The Hollow is eating the names of the living, one memory at a time. The Gravekeeper waits at the bottom of the crypt.
+The Gravekeeper is at rest, or something like it. Below the crypt, the Garden District is choked with a rot that keeps what it loves. A scholar named Orin has been suspended in amber since the city drowned. The Rotting Saint tends the garden.
+The garden is behind you. The Ember Halls burn under the city, and the Hollow King sits on a throne made of doors. Mara has stopped pretending she does not know him. The last light is below.
+You gave the lantern back to Mara. Aurel put down the city he had carried for three hundred years, and the first real dawn in eleven days broke over Ashfall. Everyone remembered. So did you.
+You broke the crown. The Hollow ended, and everything it had kept ended with it. Veyra, the Gravekeeper, Orin, Mara. You climbed out alive and nameless. The village looked at you as if you were a stranger.
+You took the crown. The voices were loud, then quiet, then yours. Mara burned down to a blue spark and went out. The throne fitted you exactly. A hundred years from now, another lantern will come down the stairs.
+You spoke Aurel Vane\'s true name. The crown opened like a hand and every name inside went free. The world forgot Veyra, and Mara faded smiling. You woke on the hill with a cold lantern and no memory of why you were crying.
+ASHFALL
+A village built on the bones of a drowned city. Its lanterns are fed with memory; when the Hollow came, the flames began to eat the names of the people who lit them.
+THE HOLLOW
+Not a monster. A hunger that was once a promise. It eats memory, and what it cannot digest it keeps: names, rooms, the shape of a hand.
+VEYRA
+The city below. It drowned in a single night three hundred years ago. Its streets are still full of people who have forgotten they are dead.
+MEMORY SEALS
+The city locked its important memories behind rune-seals. A seal does not keep things safe. It keeps them still.
+A door with a hundred mouths. It remembers names and repeats them until someone answers. What answers is rarely the person who was called.
+Cartographer, archivist, reluctant immortal. He mapped the Hollow before it mapped him. The amber kept him alive and the rot kept the amber hungry.
+A vessel made of names. Aurel forged it to hold a city. A vessel that forgets it is a vessel begins to believe it is a king.
+AUREL VANE
+The first Lamplighter. On the night Veyra drowned he opened his chest and let the city pour in. He has been holding it ever since. He calls it love with nowhere left to go.
+A lamplighter of Veyra. She lit the lamps while the water rose, and has been holding the light ever since. She is not a ghost. She is a flame that remembers being a woman.
+He guarded empty graves for three hundred years. He did not know he was dead. A name given freely is the only thing the Hollow cannot digest.
+Veyra\'s old pleasure gardens. The flood brought rot, and the rot brought flowers. Every flower is a name. The garden is very proud of its collection.
+THE ROT
+A patient green hunger. It does not hate what it eats. It grows toward warm things because it wants to keep them. That is the whole of its theology.
+A priest who promised his congregation they would be remembered. He ate their memories to keep them from the river. The garden is his church now, and the flowers are his choir.
+THE EMBER HALLS
+The forge of Veyra. Every flame in the halls is a memory burning down to its last thought. The Ember Witch tends the ones that still have something to say.
+When the water reached the roots, the city came down a room at a time. The dark that follows is not water. It is the absence of the rooms that used to be there.
+It shows the last night, not the viewer. Aurel opened his chest. Mara shouted his name. The crown did not get forged. It grew.
+THE THRONE OF DOORS
+A seat made of every door that ever led into Veyra. Each one still whispers. The king has forgotten which side of the door he is on.
+THE LANTERN SPIRIT
+She has waited three hundred years for someone who still remembers how to carry a flame. She is not sure whether she wants to save you or be saved.
+A MOUTH IN THE MUD
+It said a name: Aurel. It may have been a warning. It may have been an invitation.
+He asked to be remembered. You either gave him a name or gave him the quiet. Either way he followed you to the fire, or he did not.
+CARTOGRAPHER OF THE HOLLOW
+Suspended in amber for thirty years, still taking notes. He wants to see the sun and check his sources.
+A PROFESSIONAL
+She offered you a brand that would make the dark see its own reflection. She has standards. She also has a very good fire.
+Your enemy, or a man who could not let a city go. The difference matters more than it should.
+He wanted to keep everyone. He succeeded. That was the problem.
+GOBLIN
+Small, quick, and convinced that your pockets belong to it. Travels in bad company.
+A zigzag of bad intentions. Hard to hit when it remembers to move sideways.
+TINY ZOMBIE
+Small enough to be sad. Hungry enough not to be.
+SKELETON
+What the crypt keeps when it cannot keep anything softer.
+SWAMPY
+A drowned thing that never learned it should have stopped moving.
+MUDDY
+The mud here has opinions. Most of them are about your ankles.
+ORC WARRIOR
+A soldier of a kingdom that no longer has a name. Still follows orders.
+MASKED ORC
+The mask is not for protection. It is so the Hollow cannot learn its face.
+CHORT
+A small horned thing that runs faster than it thinks.
+ORC SHAMAN
+Throws green fire and bad advice. Both are contagious.
+ICE ZOMBIE
+The cold preserved it. The cold is not a kindness.
+NECROMANCER
+A scholar of the wrong kind of memory. Keeps notes in other people\'s bones.
+Guardian of empty graves. He did not know he was dead. He knew he was lonely.
+A garden with a man inside it. The flowers are the congregation.
+Aurel Vane, first Lamplighter. He held a city in his chest until it became a crown. He is very tired.
+Give the lantern to Mara. Trust her. Spare the Gravekeeper. Free Orin. Refuse the brand. See the truth. Carry all three shards.
+Break the crown. Let the Hollow end, and everything it kept end with it.
+Take the crown. Carry the city. Continue the cycle.
+Speak Aurel\'s true name. Requires the mirror\'s truth, Orin\'s friendship, and all three shards.
+<div class="storyMeta"><span>CH. 
+</span><span>FLOOR <b>
+/10</b></span><span>EMBERS <b>
+</b></span><span>SHARDS <b>
+/3</b></span><span>CYCLE <b>
+The lantern spirit
+Keeper of empty graves
+Cartographer of the Hollow
+A professional, warming her hands
+<div class="chapterCard"><div class="ccK">THE LANTERN IS QUIET</div><div class="ccT">
+AN ENDING
+</div><div class="ccD">The story is finished. The epilogue is waiting. Begin another cycle when you are ready to descend again.</div></div>
+<div class="chapterCard"><div class="ccK">THE LAST CAMP · CHAPTER 
+</div><div class="ccT">
+</div><div class="ccD">A fire above the waterline. Embers to spend. People to talk to. Then down again, into the next chapter.</div></div>
+<div class="chapterCard"><div class="ccK">CHAPTER 
+/10</div><div class="ccT">
+</div><div class="ccD">
+<div class="chapterCard"><div class="ccK">A STORY OF MEMORY AND ASH</div><div class="ccT">THE LANTERN BELOW</div><div class="ccD">Ashfall has not seen a dawn in eleven days. The last lantern is dying. Beneath the village, the drowned city of Veyra is still remembering. Something down there has been eating the names of the living.</div></div>
+<div class="storyTag">STORY MODE</div>
+<div class="storyMeta"><span>3 CHAPTERS</span><span>10 FLOORS</span><span>4 ENDINGS</span><span>ONE LANTERN</span></div>
+<div class="menuMeta"><span>ENDINGS <b>
+<span>BEST <b>
+EPILOGUE — 
+THE END
+CONTINUE — THE LAST CAMP
+CONTINUE — FLOOR 
+NEW STORY
+JOURNAL
+CLASSIC RUN
+MULTIPLAYER
+MORE
+<div class="warnline">PIXEL VIOLENCE - 3 GORE LEVELS</div>
+CREATED BY SANCIOPANZA — <a href="https://github.com/SancioPanza88" target="_blank" rel="noopener">GITHUB</a> — A STORY MODE FOR HOLLOWDEEP
+CHOOSE YOUR LANTERN
+THE STORY BEGINS AT ASHFALL
+<div class="tx ac">
+</div><div class="tx dim">STARTS WITH: 
+</div><div class="storyMeta"><span>ONE HERO</span><span>10 FLOORS</span><span>YOUR NAME MATTERS</span></div>
+BEGIN THE STORY
+BACK
+BEGIN AGAIN?
+<div class="tx">A NEW STORY WILL OVERWRITE YOUR CURRENT DESCENT.<br><span class="dim">Your ending gallery is kept. The deep does not mind starting over.</span></div><div class="storyTag">THE LANTERN REMEMBERS</div>
+BEGIN AGAIN
+CANCEL
+<div class="tx">EVERYTHING ELSE IN THE DEEP.</div><div class="storyMeta"><span>STORY MODE</span><span>CLASSIC</span><span>CO-OP</span></div>
+HOW TO PLAY
+OPTIONS
+CREDITS
+CONTENT WARNING
+THE ORIGINAL ROGUELIKE
+BACK TO STORY
+<button type="button" class="npc" data-npc="
+"><span class="nn">
+<br><span class="ns">
+</span></span><span class="uc">TALK</span></button>
+<i class="
+<button type="button" class="up
+ max
+ no
+" data-up="
+<span><span class="un">
+</span><div class="pips">
+<span class="ns">
+<span class="uc">
+<div class="campHead"><span>CHAPTER <b>
+</b> — 
+<span>FLOOR <b>
+<span>EMBERS <b>
+<span>SHARDS <b>
+<div class="tx ac" style="font-size:.78cqw">
+<div class="campArtWrap"><canvas id="campArt" width="352" height="84"></canvas></div>
+<div class="campGrid">
+<div class="campCol"><div class="campLbl">AT THE FIRE</div>
+<div class="campCol"><div class="campLbl">SPEND EMBERS</div>
+<div class="tx dim" style="font-size:.7cqw">1–4 SPEND EMBERS · 5–8 SPEAK · REST HEALS YOU BETWEEN CHAPTERS</div>
+SAVE & QUIT
+<div class="jrEntry
+ lock
+NOT YET REMEMBERED.
+<div class="jrn">
+<div class="jrIntro">
+THE STORY IS FINISHED. THE LANTERN REMEMBERS.
+NO STORY HAS BEEN WRITTEN YET.
+<div class="storyMeta"><span>KILLS <b>
+</b></span><span>DEATHS <b>
+</b></span><span>ENDINGS <b>
+/4</b></span><span>CYCLE <b>
+<h3>STORY SO FAR</h3>
+<div class="jrEntry"><b>
+<div class="jrEntry"><b>THE DESCENT</b><span>
+<div class="jrEntry lock"><b>???</b><span>BEGIN A STORY TO FILL THESE PAGES.</span></div>
+<h3>THE DEEP — LORE <span style="color:#8f84a8">(
+<h3>PEOPLE <span style="color:#8f84a8">(
+<h3>BESTIARY <span style="color:#8f84a8">(
+<h3>ECHOES OF VEYRA <span style="color:#8f84a8">(
+FLOOR 
+AN ECHO
+AN ECHO STILL WAITS ON FLOOR 
+<h3>MEMORY SHARDS <span style="color:#8f84a8">(
+A city counting its dead behind a rune-seal. Found on floor 2.
+The last procession of Veyra, still walking. Found on floor 5.
+The night the roof came down, remembered by the ceiling. Found on floor 8.
+"><b class="jrShard">
+A MEMORY SHARD IS STILL BURIED SOMEWHERE BELOW.
+<h3>ENDINGS <span style="color:#8f84a8">(
+/4)</span></h3><div class="endRow">
+<span class="endChip
+ got
+<div class="jrEntry"><b>THE LANTERN\'S ACCOUNT</b><span>CYCLE 
+ · KILLS 
+ · DEATHS 
+ · EMBERS 
+ · SHARDS 
+ · ENDINGS 
+<div class="epiStats">
+<b>ENEMIES SLAIN</b><span>
+<b>MEMORY SHARDS</b><span>
+<b>EMBERS CARRIED</b><span>
+<b>ENDINGS FOUND</b><span>
+<b>THE LANTERN</b><span>
+RETURNED
+EMPTY
+WORN
+BROKEN
+<div class="epiHero">
+</div><div class="epiSub">
+<div class="campArtWrap"><canvas id="epiArt" width="352" height="84"></canvas></div>
+<div class="tx">
+<div class="endRow">
+<div class="tx dim">THE DEEP IS QUIET. FOR NOW.</div>
+NEW CYCLE
+MAIN MENU
+THE LANTERN GUTTERS
+<div class="tx">YOU FELL ON FLOOR 
+/10<br><span class="dim">CHAPTER 
+<div class="storyMeta"><span>DEATHS <b>
+/3</b></span><span>EMBERS <b>
+<div class="tx ac">YOU WILL RISE AT THE START OF FLOOR 
+<div class="tx dim">The deep keeps what it catches. The lantern does not.</div>
+RISE AGAIN
+PAUSED
+<div class="tx dim">THE DEEP DOES NOT PAUSE. IT ONLY WAITS.</div>
+RESUME
+LANTERN PULSE
+<br>Burn the dark back. Damages nearby enemies.<br>Pushes the collapse away.
+6px 'Press Start 2P',monospace
+SPEAK THE RUNES  
+ECHO
+THE LANTERN
+E: LIGHT THE SEAL
+ECHO OF VEYRA
+WALK INTO IT
+7px 'Press Start 2P',monospace

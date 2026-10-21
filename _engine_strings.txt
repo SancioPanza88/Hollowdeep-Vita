@@ -1,0 +1,255 @@
+11	RUSTY SWORD
+12	SWORD
+14	EMERALD STAFF
+15	KNIGHT SWORD
+16	KATANA
+17	MACHETE
+18	SPEAR
+19	KNIFE
+20	SPIKED CLUB
+21	MACE
+23	HAMMER
+24	SERRATED BLADE
+25	GOLDEN SWORD
+26	CLEAVER
+27	WAR AXE
+28	LONGBOW
+29	RUBY STAFF
+30	SAMURAI BLADE
+31	DUEL SWORD
+32	LAVISH SWORD
+33	DOUBLE AXE
+34	TITAN HAMMER
+35	RUBY BLADE
+37	KNIGHT
+37	Balanced fighter with a trusty sword.
+38	Fast ranged hunter with a quick dash.
+39	WIZARD
+39	Homing magic bolts and a long dash.
+40	DWARF
+40	Slow bruiser with 5 hearts and a heavy hammer.
+41	LIZARD
+41	Long spear pierces lines. 25% critical hits.
+45	OGRE
+45	BIG ZOMBIE
+45	THE HOLLOW KING
+50	ENDLESS ABYSS
+50	THE HOLLOW
+50	EMBER HALLS
+50	TOXIC DEPTHS
+50	DAMP CRYPT
+99	DWARF
+99	LIZARD
+153	FLOOR 
+153	FLOOR 
+172	TREASURE ROOM
+173	MERCHANT
+174	BOSS: 
+185	WAVE 
+207	 IS DOWN! HOLD E TO REVIVE
+543	POWER +1
+543	SWIFTNESS UP
+543	ATTACK SPEED UP
+543	MAX HEART +1
+547	WEAPONS POPPED OUT!
+547	A WEAPON POPPED OUT!
+548	TEAM: 
+549	NOT ENOUGH COINS
+550	FULLY HEALED
+552	BOSS DEFEATED!
+552	STAIRS UNLOCKED!
+552	ROOM CLEARED!
+613	 REVIVED!
+626	REINFORCEMENTS!
+719	Network library not available.
+720	Could not open the room: 
+727	The game has already started.
+728	The room is full.
+730	Connected! Waiting for the host to start.
+730	Could not join.
+741	 LEFT THE GAME
+742	The host left the game.
+743	ABCDEFGHJKLMNPQRSTUVWXYZ23456789
+745	Enter the 4-5 character room code.
+746	Searching for the host...
+747	No host found. Check the code. If it keeps failing, this page may be blocking WebRTC or tracker connections.
+769	DOWN
+782	FULL HEAL
+782	MAX HEART
+782	POWER +1
+782	SWIFTNESS
+782	ATTACK SPEED
+796	CHEST
+796	E: OPEN
+797	 IS DOWN
+797	HOLD E: REVIVE
+798	ESCAPE
+798	STAIRS
+798	E: 
+798	LEAVE
+798	DESCEND
+799	CORPSE
+799	E: THROW BODY
+799	E: LIFT BODY
+801	DPS 
+802	E: BUY
+802	E: SWAP
+803	E: BUY
+841	FLOOR 
+849	SHIFT
+850	  DMG 
+865	DASH
+870	<b class="k">
+871	<div class="st"><span>
+871	</span><div class="bar"><i style="width:
+872	<div class="cards">
+872	<div class="cd
+872	 on
+872	" data-h="
+872	"><canvas width="16" height="28"></canvas><b>
+873	LOOK: 
+873	MALE
+873	FEMALE
+875	MOVE
+875	<br>or the arrow keys
+875	ATTACK
+875	MOUSE
+875	 to aim<br>
+875	CLICK
+875	 or 
+875	SPACE
+875	DASH
+875	SHIFT
+875	<br>Slip through any attack
+876	OPEN
+876	<br>Chests and stairs
+876	SWAP
+876	 on a weapon<br>Your old one stays on the floor
+876	SHOP
+876	 at the merchant<br>Spend your coins
+877	HEAL
+877	Hearts drop now and then<br>Grab them when hurt
+877	CO-OP
+877	Up to 4 players online<br>Enemies scale with the party
+877	REVIVE
+877	HOLD 
+877	 by a<br>downed ally
+879	<div class="menuMeta"><span>BEST <b>
+879	</b></span><span>DEEPEST <b>FLOOR 
+879	<span>ESCAPES <b>
+879	<div class="menuMeta"><span>DESCEND</span><span>LOOT</span><span>SURVIVE</span><span>V1.0</span></div>
+880	A PIXEL DUNGEON CRAWLER
+880	<div class="tx ac">
+880	<div class="warnline">PIXEL VIOLENCE - 3 GORE LEVELS</div>
+881	NEW GAME
+881	MULTIPLAYER
+881	HOW TO PLAY
+881	OPTIONS
+881	CREDITS
+881	DISCLAIMER
+881	CREATED BY SANCIOPANZA - <a href="https://github.com/SancioPanza88" target="_blank" rel="noopener">GITHUB</a> - GORE LEVELS OPTIONAL
+882	CHOOSE YOUR HERO
+882	<div class="tx ac">
+882	</div><div class="tx dim">STARTS WITH: 
+882	START
+882	BACK
+883	HOW TO PLAY
+883	<div class="hw">
+883	<div class="hc"><canvas width="64" height="40" data-d="
+883	"></canvas><div><div class="ht">
+883	</div><div class="hd">
+883	BACK
+884	OPTIONS
+884	<div class="tx dim">GORE LEVEL: 
+884	.<br>BLOOD, CORPSES, GUTS. E: LIFT / THROW DEAD BODIES.</div>
+884	MUSIC: 
+884	SOUND FX: 
+884	GORE LEVELS
+884	BACK
+885	LEVEL 
+885	GORE LEVELS
+885	<div class="tx dim">CURRENT: 
+885	.<br>LEVEL 1: RESTRAINED - SMALL SPRAYS, COMPACT POOLS.<br>LEVEL 2: CLASSIC - THE ORIGINAL HEAVY BLOOD AND DISMEMBERMENT.<br>LEVEL 3: EXTREME - MAXIMUM BLOOD, GUTS AND WALL CARNAGE.<br>GORE IS OPTIONAL AND CAN BE TURNED OFF AT ANY TIME.</div>
+885	GORE OFF
+885	RESTRAINED
+885	CLASSIC
+885	EXTREME
+885	BACK
+886	CREDITS
+886	<div class="grid"><b>GAME BY</b><span>SANCIOPANZA</span><b>TILESET</b><span>DUNGEON TILESET II BY 0x72</span><b>SOURCE</b><span>0x72.itch.io/dungeontileset-ii</span><b>FONT</b><span>PRESS START 2P BY CODEMAN38</span><b>NETWORKING</b><span>TRYSTERO (WEBRTC P2P)</span><b>BUILT WITH</b><span>HTML5 CANVAS + WEB AUDIO</span></div><div class="tx dim">Thanks for playing!</div>
+886	BACK
+887	CONTENT WARNING
+887	<div class="disc"><div class="discBox"><b>MATURE CONTENT / 18+</b><br>STYLIZED PIXEL VIOLENCE, BLOOD, DISMEMBERMENT, ORGANS AND OPTIONAL GORE. GORE HAS THREE LEVELS, FROM RESTRAINED TO EXTREME. IT IS OFF BY DEFAULT AND CAN BE CHOSEN IN OPTIONS.</div><div class="quote">"A SMALL DUNGEON CRAWLER WITH AN OPTIONAL MEAN STREAK."</div><div class="tx dim">NO REAL PEOPLE OR ANIMALS WERE HARMED. THIS IS A WORK OF FICTION.</div></div>
+887	BACK
+888	PAUSED
+888	MENU
+888	RESUME
+888	HOW TO PLAY
+888	OPTIONS
+888	NEW GAME
+888	MAIN MENU
+888	LEAVE GAME
+889	YOU DIED
+889	<div class="tx">REACHED FLOOR 
+889	<br>ENEMIES SLAIN 
+889	 - COINS 
+889	<br>SCORE <span class="ac">
+889	 - NEW BEST!
+889	<div class="tx dim">Waiting for the host...</div>
+890	BACK TO LOBBY
+890	MAIN MENU
+890	MAIN MENU
+890	TRY AGAIN
+890	NEW GAME
+890	MAIN MENU
+891	YOU ESCAPED!
+891	<div class="tx">THE HOLLOW KING HAS FALLEN.<br>ENEMIES SLAIN 
+891	 - COINS 
+891	<br>SCORE <span class="ac">
+891	 - NEW BEST!
+891	<div class="tx dim">Waiting for the host...</div>
+892	BACK TO LOBBY
+892	MAIN MENU
+892	MAIN MENU
+892	ENDLESS MODE
+892	NEW GAME
+892	MAIN MENU
+893	MULTIPLAYER
+893	<div class="tx">ONLINE CO-OP FOR UP TO 4 PLAYERS<br><span class="dim">Enemies, loot and hearts scale with the party size.<br>One player hosts and shares the room code.</span></div>
+893	<div class="tx ac">
+893	HOST GAME
+893	JOIN GAME
+893	BACK
+894	JOIN GAME
+894	<div class="tx">ENTER THE ROOM CODE</div><input id="code" maxlength="6" autocomplete="off" spellcheck="false" value="
+894	"><div class="tx ac" id="ns">
+894	JOIN
+894	BACK
+895	<div class="sl
+895	 me
+895	 style="color:
+895	 (YOU)
+895	EMPTY
+896	LOBBY
+896	<div class="tx dim">ROOM CODE</div><div class="big">
+896	</div><div class="slots">
+896	<div class="tx ac" id="ns">
+896	Share the code. Waiting for players...
+897	START (
+897	LEAVE
+900	<div class="fx" aria-hidden="true">
+900	<i style="left:
+901	<div class="logo">HOLLOWDEEP</div>
+901	<div class="h2">
+901	<div class="sub">
+901	<div class="mbs
+901	 row
+901	<div class="mb
+901	" data-i="
+901	<div class="foot">
+902	.cd canvas
+902	.hc canvas
+916	WASD
+921	CLICK
+922	SHIFT
+933	INPUT

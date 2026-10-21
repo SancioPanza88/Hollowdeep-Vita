@@ -1,0 +1,98 @@
+name: Build PS Vita
+
+# Builds a native PS Vita VPK (VitaSDK), runs the real runtime headless on the
+# runner for screenshots, and uploads the .vpk + screenshots straight to a
+# GitHub Release. No actions/upload-artifact step on purpose: artifacts consume
+# the account storage quota, release assets do not.
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  pull_request:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vita-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: vitasdk/vitasdk:2026.08
+    env:
+      VITASDK: /usr/local/vitasdk
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Toolchain check
+        run: |
+          set -eux
+          if ! command -v python3 >/dev/null; then
+            apt-get update && apt-get install -y python3 python3-pip
+          fi
+          if ! command -v make >/dev/null || ! command -v gcc >/dev/null; then
+            apt-get update && apt-get install -y build-essential
+          fi
+          export PATH="$VITASDK/bin:$PATH"
+          python3 --version
+          gcc --version | head -1
+          arm-vita-eabi-gcc --version | head -1
+          vita-elf-create --help >/dev/null 2>&1 || echo "vita-elf-create missing"
+          echo "PATH ok"
+
+      - name: Extract game assets
+        run: |
+          set -eux
+          python3 -m pip install --quiet fonttools brotli \
+            || python3 -m pip install --quiet --break-system-packages fonttools brotli
+          python3 tools/extract_assets.py
+          python3 tools/make_vita_art.py
+
+      - name: Host self-test (same runtime, headless)
+        run: |
+          set -eux
+          node --check vita/js/shim.js
+          node --check vita/js/ui.js
+          node tools/local_test.js 200 "6:ArrowDown,8:ArrowDownUp,10:ArrowDown,12:ArrowDownUp,16:Enter,18:EnterUp,30:Enter,32:EnterUp,90: ,92:SpaceUp"
+          make -C vita host
+          mkdir -p shots
+          ./vita/build/hollowdeep_host --frames 200 --out shots \
+            --shots 6,30,60,120,190 \
+            --keys "6:ArrowDown,8:ArrowDownUp,10:ArrowDown,12:ArrowDownUp,16:Enter,18:EnterUp,30:Enter,32:EnterUp,90: ,92:SpaceUp"
+          python3 tools/ppm2png.py 'shots/*.ppm'
+
+      - name: Build PS Vita package
+        run: |
+          set -eux
+          export PATH="$VITASDK/bin:$PATH"
+          make -C vita vpk
+          test -s vita/build/Hollowdeep.vpk
+          ls -l vita/build/Hollowdeep.vpk
+
+      - name: Publish release
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0
+          name: Hollowdeep — PS Vita (native)
+          fail_on_unmatched_files: true
+          body: |
+            **Hollowdeep — The Lantern Below**, native PS Vita port.
+
+            - Native VitaSDK application (no browser, no web engine).
+            - Same game logic as the PC HTML build, running on an embedded JS
+              engine with a native Canvas2D rasterizer.
+            - Includes story mode, classic roguelike, IT/EN localisation and
+              persistent saves in `ux0:data/Hollowdeep/`.
+            - Install the `.vpk` with VitaShell.
+          files: |
+            vita/build/Hollowdeep.vpk
+            shots/frame_0006.png
+            shots/frame_0030.png
+            shots/frame_0060.png
+            shots/frame_0120.png
+            shots/frame_0190.png
