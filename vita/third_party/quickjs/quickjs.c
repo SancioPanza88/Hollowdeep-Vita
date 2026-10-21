@@ -44663,7 +44663,8 @@ static int getTimezoneOffset(int64_t time)
         }
     }
     ti = time;
-#if defined(_WIN32)
+    /* newlib (PS Vita) has no tm_gmtoff field: use the portable path. */
+#if defined(_WIN32) || defined(HOLLOWDEEP_VITA)
     {
         struct tm *tm;
         time_t gm_ti, loc_ti;
