@@ -98,8 +98,14 @@ VITA_OBJS := $(addprefix $(OBJV)/,$(COMMON_OBJ_NAMES:%=%.o)) \
 $(GEN)/assets_data_vita.o: $(GEN)/assets_data.c | $(OBJV)
 	$(VITA_CC) $(VITA_CFLAGS) -x c -c $< -o $@
 
+# __sce_headroom: vita-elf-create appends the SCE metadata (~2.4 KB) at the end
+# of the code segment; without headroom the page-aligned data segment can land
+# right on top of it and packaging dies with "segment 1 overlaps". The VitaSDK
+# linker script aligns .data to 64 KiB and honours this symbol.
+VITA_LDFLAGS := -Wl,-q -Wl,--defsym=__sce_headroom=0x10000 -Wl,-z,max-page-size=0x10000
+
 $(OBJV)/hollowdeep.elf: $(VITA_OBJS)
-	$(VITA_CC) -Wl,-q -o $@ $^ -lm -lvita2d \
+	$(VITA_CC) $(VITA_LDFLAGS) -o $@ $^ -lm -lvita2d \
 		-lSceDisplay_stub -lSceGxm_stub -lSceCtrl_stub -lSceSysmodule_stub \
 		-lSceAppMgr_stub -lScePower_stub -lSceKernelThreadMgr_stub \
 		-lSceCommonDialog_stub
