@@ -70,6 +70,8 @@ jobs:
         run: |
           set -eux
           export PATH="$VITASDK/bin:$PATH"
+          make -C vita build/vita/hollowdeep.elf
+          arm-vita-eabi-readelf -lW vita/build/vita/hollowdeep.elf | head -40
           make -C vita vpk
           test -s vita/build/Hollowdeep.vpk
           ls -l vita/build/Hollowdeep.vpk
