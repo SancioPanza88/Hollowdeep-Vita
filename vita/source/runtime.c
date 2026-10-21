@@ -433,6 +433,7 @@ void rt_key(const char *key, int down) {
 }
 
 void rt_frame(double now_ms) {
+    grad_reset();
     call_global_1("__vita_frame", now_ms);
 }
 

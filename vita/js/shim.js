@@ -305,6 +305,7 @@
   function ClassList(el) { this.el = el; this._set = {}; }
   ClassList.prototype._sync = function () {
     this.el.attrs['class'] = Object.keys(this._set).join(' ');
+    bumpDom();
   };
   ClassList.prototype.add = function () {
     for (var i = 0; i < arguments.length; i++) this._set[arguments[i]] = 1;
@@ -327,6 +328,14 @@
 
   var doc = null;
 
+  /* Monotonic counter bumped on every observable DOM change. The overlay
+   * renderer uses it to skip repainting static menus every frame. */
+  var domVer = 1;
+  function bumpDom() {
+    domVer++;
+    if (doc) doc._ver = domVer;
+  }
+
   function TextNode(data, parent) {
     this.nodeType = 3;
     this.data = String(data);
@@ -334,7 +343,7 @@
   }
   Object.defineProperty(TextNode.prototype, 'nodeValue', {
     get: function () { return this.data; },
-    set: function (v) { this.data = String(v); }
+    set: function (v) { this.data = String(v); bumpDom(); }
   });
   Object.defineProperty(TextNode.prototype, 'parentElement', {
     get: function () {
@@ -392,6 +401,7 @@
     node.parentNode = this;
     this.childNodes.push(node);
     if (node.nodeType === 1 && node.id && doc) doc._ids[node.id] = node;
+    bumpDom();
     return node;
   };
   El.prototype.insertBefore = function (node, ref) {
@@ -400,12 +410,14 @@
     node.parentNode = this;
     this.childNodes.splice(i, 0, node);
     if (node.nodeType === 1 && node.id && doc) doc._ids[node.id] = node;
+    bumpDom();
     return node;
   };
   El.prototype.removeChild = function (node) {
     var i = this.childNodes.indexOf(node);
     if (i >= 0) this.childNodes.splice(i, 1);
     if (node) node.parentNode = null;
+    bumpDom();
     return node;
   };
   El.prototype.remove = function () { if (this.parentNode) this.parentNode.removeChild(this); };
@@ -428,6 +440,7 @@
     } else if (k === 'value') {
       this.value = String(v);
     }
+    bumpDom();
   };
   El.prototype.getAttribute = function (k) { return this.attrs[k] === undefined ? null : this.attrs[k]; };
   El.prototype.hasAttribute = function (k) { return this.attrs[k] !== undefined; };
@@ -501,6 +514,7 @@
       }
       this.childNodes = [];
       this._text = v === undefined || v === null ? '' : String(v);
+      bumpDom();
     }
   });
   Object.defineProperty(El.prototype, 'innerHTML', {
@@ -514,6 +528,7 @@
       this._text = '';
       var nodes = parseHTML(v === undefined || v === null ? '' : String(v));
       for (var j = 0; j < nodes.length; j++) this.appendChild(nodes[j]);
+      bumpDom();
     }
   });
 
@@ -655,6 +670,7 @@
 
   doc = {
     _ids: {},
+    _ver: domVer,
     nodeType: 9,
     title: 'Hollowdeep',
     getElementById: function (id) { return this._ids[id] || null; },

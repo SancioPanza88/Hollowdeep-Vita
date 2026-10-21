@@ -67,6 +67,7 @@ void cv_draw_image(int id, int src_kind, int src_id,
 /* gradients ------------------------------------------------------------ */
 int  grad_new(int type, float x0, float y0, float x1, float y1, float r0, float r1);
 void grad_stop(int g, float pos, uint32_t rgba);
+void grad_reset(void);
 
 /* text ----------------------------------------------------------------- */
 void  canvas_font_init(const uint8_t *ttf, int len);

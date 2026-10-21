@@ -25,10 +25,11 @@
 
 typedef struct { float a, b, c, d, e, f; } Xf;
 
-typedef struct { float pos; uint32_t rgba; } Stop;
+typedef struct { float pos, inv; uint32_t rgba; } Stop;
 typedef struct {
     int used, type;
     float x0, y0, x1, y1, r0, r1;
+    float dx, dy, inv_len2, inv_span;
     int n;
     Stop st[MAX_STOPS];
 } Grad;
@@ -62,6 +63,7 @@ typedef struct { float x0, y0, x1, y1; } Edge;
 
 static Canvas g_canvas[MAX_CANVAS];
 static Grad g_grad[MAX_GRAD];
+static int g_grad_hi = 0;
 static Img g_img[MAX_IMG];
 
 static Edge *g_edges;
@@ -411,15 +413,27 @@ int grad_new(int type, float x0, float y0, float x1, float y1, float r0, float r
             g->type = type;
             g->x0 = x0; g->y0 = y0; g->x1 = x1; g->y1 = y1;
             g->r0 = r0; g->r1 = (r1 > r0) ? r1 : r0 + 1.0f;
+            g->dx = x1 - x0; g->dy = y1 - y0;
+            g->inv_len2 = 1.0f / (g->dx * g->dx + g->dy * g->dy + 1e-9f);
+            g->inv_span = 1.0f / (g->r1 - g->r0);
+            if (i + 1 > g_grad_hi) g_grad_hi = i + 1;
             return i + 1;
         }
     }
     return 0;
 }
 
+/* Gradients only live for one frame; without this the 256-slot pool runs dry
+ * after a few seconds and every later fill silently becomes a solid colour. */
+void grad_reset(void) {
+    int i;
+    for (i = 0; i < g_grad_hi; i++) g_grad[i].used = 0;
+    g_grad_hi = 0;
+}
+
 void grad_stop(int id, float pos, uint32_t rgba) {
     Grad *g;
-    int i, j;
+    int i;
     if (id <= 0 || id > MAX_GRAD) return;
     g = &g_grad[id - 1];
     if (!g->used || g->n >= MAX_STOPS) return;
@@ -430,12 +444,17 @@ void grad_stop(int id, float pos, uint32_t rgba) {
     }
     g->st[i].pos = clampf(pos, 0.0f, 1.0f);
     g->st[i].rgba = rgba;
-    (void)j;
+    /* Recompute segment reciprocals: the inner loop interpolates per pixel and
+     * must not divide there. */
+    for (i = 0; i < g->n; i++) {
+        float span = (i == 0) ? 0.0f : g->st[i].pos - g->st[i - 1].pos;
+        g->st[i].inv = span > 0.00001f ? 1.0f / span : 0.0f;
+    }
 }
 
 static inline int lerp_i(int a, int b, float t) { return a + (int)((b - a) * t + 0.5f); }
 
-static uint32_t grad_color(const Grad *g, float x, float y) {
+static inline uint32_t grad_color(const Grad *g, float x, float y) {
     float t;
     int i;
     if (g->n == 0) return 0;
@@ -443,19 +462,16 @@ static uint32_t grad_color(const Grad *g, float x, float y) {
     if (g->type == PAINT_RADIAL) {
         float dx = x - g->x0, dy = y - g->y0;
         float d = sqrtf(dx * dx + dy * dy);
-        t = (d - g->r0) / (g->r1 - g->r0);
+        t = (d - g->r0) * g->inv_span;
     } else {
-        float dx = g->x1 - g->x0, dy = g->y1 - g->y0;
-        float len2 = dx * dx + dy * dy;
-        if (len2 <= 0.0001f) return g->st[0].rgba;
-        t = ((x - g->x0) * dx + (y - g->y0) * dy) / len2;
+        if (g->inv_len2 <= 0.0f) return g->st[0].rgba;
+        t = ((x - g->x0) * g->dx + (y - g->y0) * g->dy) * g->inv_len2;
     }
     t = clampf(t, 0.0f, 1.0f);
     if (t <= g->st[0].pos) return g->st[0].rgba;
     for (i = 1; i < g->n; i++) {
         if (t <= g->st[i].pos) {
-            float a = g->st[i - 1].pos, b = g->st[i].pos;
-            float f = (b - a) > 0.00001f ? (t - a) / (b - a) : 0.0f;
+            float f = (t - g->st[i - 1].pos) * g->st[i].inv;
             uint32_t c0 = g->st[i - 1].rgba, c1 = g->st[i].rgba;
             return pack_rgba(lerp_i(cr(c0), cr(c1), f), lerp_i(cg(c0), cg(c1), f),
                              lerp_i(cb(c0), cb(c1), f), lerp_i(ca(c0), ca(c1), f));
@@ -466,33 +482,79 @@ static uint32_t grad_color(const Grad *g, float x, float y) {
 
 /* ------------------------------------------------------------- blending */
 
+/* v / 255, rounded, for 0 <= v <= 65025. Constant-division by 255 is cheap
+ * for the compiler, but this keeps the inner loops branch-simple and lets us
+ * use it on products too. */
+static inline unsigned int div255(unsigned int v) {
+    return (v + 1u + (v >> 8)) >> 8;
+}
+
+/* 24.8 fixed-point reciprocal: 1/oa for the rare translucent-destination
+ * blend. Built once, indexed by the 1..255 resulting alpha. */
+static uint32_t g_recip[256];
+static int g_recip_ready = 0;
+
+static void recip_init(void) {
+    unsigned int i;
+    if (g_recip_ready) return;
+    for (i = 1; i < 256; i++) g_recip[i] = (16777216u + i / 2) / i;
+    g_recip_ready = 1;
+}
+
+/* The old version divided by the resulting alpha three times per pixel.
+ * Cortex-A9 has no integer divider, so each of those was a ~40 cycle software
+ * call: at 500k pixels/frame it alone cost more than everything else. The
+ * opaque-destination path (nearly every pixel) is now multiply-only. */
 static inline uint32_t blend_px(uint32_t dst, uint32_t src, int cov, int comp) {
-    int sa = ca(src) * cov / 255;
-    int sr = cr(src), sg = cg(src), sb = cb(src);
-    int dr = cr(dst), dg = cg(dst), db = cb(dst), da = ca(dst);
-    if (sa <= 0) return dst;
+    unsigned int sa, sr, sg, sb;
+    if (cov <= 0) return dst;
+    sr = src & 255u;
+    sg = (src >> 8) & 255u;
+    sb = (src >> 16) & 255u;
+    sa = (src >> 24) & 255u;
+    if (cov < 255) sa = div255(sa * (unsigned int)cov);
+    if (sa == 0) return dst;
     switch (comp) {
     case COMP_COPY:
-        return pack_rgba(sr, sg, sb, sa);
+        return sr | (sg << 8) | (sb << 16) | (sa << 24);
     case COMP_DEST_OUT: {
-        int na = da * (255 - sa) / 255;
-        return pack_rgba(dr, dg, db, na);
+        unsigned int da = (dst >> 24) & 255u;
+        return (dst & 0x00FFFFFFu) | (div255(da * (255u - sa)) << 24);
     }
     case COMP_LIGHTER: {
-        int r = dr + sr * sa / 255, g = dg + sg * sa / 255, b = db + sb * sa / 255;
-        int a = da + sa;
-        return pack_rgba(r > 255 ? 255 : r, g > 255 ? 255 : g, b > 255 ? 255 : b,
-                         a > 255 ? 255 : a);
+        unsigned int da = (dst >> 24) & 255u;
+        unsigned int r = (dst & 255u) + div255(sr * sa);
+        unsigned int g = ((dst >> 8) & 255u) + div255(sg * sa);
+        unsigned int b = ((dst >> 16) & 255u) + div255(sb * sa);
+        unsigned int a = da + sa;
+        return (r > 255 ? 255 : r) | ((g > 255 ? 255 : g) << 8) |
+               ((b > 255 ? 255 : b) << 16) | ((a > 255 ? 255 : a) << 24);
     }
     default: {
-        int ia = 255 - sa;
-        int oa = sa + da * ia / 255;
-        int r, g, b;
-        if (oa <= 0) return 0;
-        r = (sr * sa + dr * da * ia / 255) / oa;
-        g = (sg * sa + dg * da * ia / 255) / oa;
-        b = (sb * sa + db * da * ia / 255) / oa;
-        return pack_rgba(r, g, b, oa);
+        unsigned int da = (dst >> 24) & 255u;
+        unsigned int ia = 255u - sa;
+        if (da == 255) {
+            unsigned int r = div255(sr * sa + (dst & 255u) * ia);
+            unsigned int g = div255(sg * sa + ((dst >> 8) & 255u) * ia);
+            unsigned int b = div255(sb * sa + ((dst >> 16) & 255u) * ia);
+            return r | (g << 8) | (b << 16) | 0xFF000000u;
+        }
+        if (da == 0) return sr | (sg << 8) | (sb << 16) | (sa << 24);
+        {
+            unsigned int dia = div255(da * ia);
+            unsigned int oa = sa + dia;
+            uint64_t rn, gn, bn;
+            unsigned int r, g, b;
+            if (oa == 0) return 0;
+            recip_init();
+            rn = (uint64_t)(sr * sa + (dst & 255u) * dia);
+            gn = (uint64_t)(sg * sa + ((dst >> 8) & 255u) * dia);
+            bn = (uint64_t)(sb * sa + ((dst >> 16) & 255u) * dia);
+            r = (unsigned int)((rn * g_recip[oa] + 8388608u) >> 24);
+            g = (unsigned int)((gn * g_recip[oa] + 8388608u) >> 24);
+            b = (unsigned int)((bn * g_recip[oa] + 8388608u) >> 24);
+            return r | (g << 8) | (b << 16) | ((oa > 255 ? 255u : oa) << 24);
+        }
     }
     }
 }
@@ -589,12 +651,21 @@ static void raster_edges(Canvas *c, const Paint *p) {
                     if (!g) {
                         int a = (int)(ca(solid) * p->alpha + 0.5f);
                         if (a <= 0) continue;
-                        for (j = x0; j < x1; j++) row[j] = blend_px(row[j], solid, a, p->comp);
+                        if (a >= 255 && p->comp == COMP_SOURCE_OVER) {
+                            uint32_t v = (solid & 0x00FFFFFFu) | 0xFF000000u;
+                            for (j = x0; j < x1; j++) row[j] = v;
+                        } else {
+                            for (j = x0; j < x1; j++) row[j] = blend_px(row[j], solid, a, p->comp);
+                        }
                     } else {
                         for (j = x0; j < x1; j++) {
                             uint32_t col = grad_color(g, (float)j + 0.5f, yc);
                             int a = (int)(ca(col) * p->alpha + 0.5f);
-                            if (a > 0) row[j] = blend_px(row[j], col, a, p->comp);
+                            if (a <= 0) continue;
+                            if (a >= 255 && p->comp == COMP_SOURCE_OVER)
+                                row[j] = (col & 0x00FFFFFFu) | 0xFF000000u;
+                            else
+                                row[j] = blend_px(row[j], col, a, p->comp);
                         }
                     }
                 }
@@ -902,23 +973,42 @@ void cv_draw_image(int id, int src_kind, int src_id, float sx, float sy, float s
     if (x1 > c->clip[2]) x1 = c->clip[2];
     if (y1 > c->clip[3]) y1 = c->clip[3];
     if (c->m.b == 0.0f && c->m.c == 0.0f) {
+        /* Axis aligned: walk the source rect incrementally. The old loop did
+         * two float divisions per pixel; now it is two adds. */
+        float ax = c->m.a, ay = c->m.d;
+        float stepx, stepy, u0, v0;
+        int cov = (int)(alpha * 255.0f + 0.5f);
+        if (fabsf(ax) < 1e-6f || fabsf(ay) < 1e-6f) { free(copy); return; }
+        if (cov < 0) cov = 0;
+        if (cov > 255) cov = 255;
+        stepx = (sw / dw) / ax;
+        stepy = (sh / dh) / ay;
+        u0 = sx + ((((float)x0 + 0.5f - c->m.e) / ax) - dx) * (sw / dw);
+        v0 = sy + ((((float)y0 + 0.5f - c->m.f) / ay) - dy) * (sh / dh);
         for (py = y0; py < y1; py++) {
-            float fy = ((float)py + 0.5f - p0.y) / (p1.y - p0.y) * dh;
-            int syy = (int)floorf(sy + fy);
+            float vy = v0 + (float)(py - y0) * stepy;
+            float ux = u0;
             uint32_t *row = c->px + (size_t)py * c->w;
-            if (syy < 0 || syy >= ih) continue;
-            for (px = x0; px < x1; px++) {
-                float fx = ((float)px + 0.5f - p0.x) / (p1.x - p0.x) * dw;
-                int sxx = (int)floorf(sx + fx);
-                uint32_t s;
-                int a;
-                if (sxx < 0 || sxx >= iw) continue;
-                s = sp[(size_t)syy * iw + sxx];
-                a = ca(s);
-                if (!a) continue;
-                a = (int)(a * alpha + 0.5f);
-                if (a <= 0) continue;
-                row[px] = blend_px(row[px], s, a, comp);
+            int syy;
+            if (vy < 0.0f) continue;
+            syy = (int)vy;
+            if (syy >= ih) continue;
+            {
+                const uint32_t *srow = sp + (size_t)syy * iw;
+                for (px = x0; px < x1; px++, ux += stepx) {
+                    uint32_t s;
+                    if (ux < 0.0f) continue;
+                    {
+                        int sxx = (int)ux;
+                        if (sxx >= iw) continue;
+                        s = srow[sxx];
+                    }
+                    if (!(s >> 24)) continue;
+                    if (cov >= 255 && ((s >> 24) & 255u) == 255u && comp == COMP_SOURCE_OVER)
+                        row[px] = s | 0xFF000000u;
+                    else
+                        row[px] = blend_px(row[px], s, cov, comp);
+                }
             }
         }
     } else {
@@ -1053,6 +1143,7 @@ void cv_text(int id, const char *utf8, float x, float y, int px, int align, int 
     float sc, asc_px, desc_px;
     int col_r = cr(rgba), col_g = cg(rgba), col_b = cb(rgba);
     int col_a = (int)(ca(rgba) * alpha + 0.5f);
+    uint32_t col_px = pack_rgba(col_r, col_g, col_b, 255);
     if (!c || !utf8 || px < 1) return;
     if (!g_font_ok) return;
     sc = stbtt_ScaleForMappingEmToPixels(&g_fi, (float)px);
@@ -1103,9 +1194,10 @@ void cv_text(int id, const char *utf8, float x, float y, int px, int align, int 
                     int a;
                     if (!cov) continue;
                     if (dxx < c->clip[0] || dxx >= c->clip[2]) continue;
-                    a = cov * col_a / 255;
+                    a = div255(cov * col_a);
                     if (a <= 0) continue;
-                    drow[dxx] = blend_px(drow[dxx], pack_rgba(col_r, col_g, col_b, 255), a, comp);
+                    if (a >= 255 && comp == COMP_SOURCE_OVER) drow[dxx] = col_px | 0xFF000000u;
+                    else drow[dxx] = blend_px(drow[dxx], col_px, a, comp);
                 }
             }
         }

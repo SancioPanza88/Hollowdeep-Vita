@@ -526,22 +526,37 @@
 
   /* ---------------------------------------------------------------- frame */
 
+  var lastMenuVer = -1;
+
   function render() {
     var game = doc.getElementById('c');
     if (game && game._cvId) __vita_set_canvas(game._cvId, overlayEl._cvId);
-    ctx.reset();
-    ctx.clearRect(0, 0, W, H);
-    var active = false;
     var cine = doc.getElementById('cine');
     var ov = doc.getElementById('ov');
-    if (cine && !cine.classList.contains('h')) {
-      renderCine();
-      active = true;
-    } else if (ov && !ov.classList.contains('h')) {
-      renderMenu(ov);
-      active = true;
+    var cineOn = cine && !cine.classList.contains('h');
+    var ovOn = ov && !ov.classList.contains('h');
+    if (!cineOn && !ovOn) {
+      lastMenuVer = -1;
+      __vita_set_overlay(0);
+      return;
     }
-    __vita_set_overlay(active ? 1 : 0);
+    if (!cineOn) {
+      /* Static menus only need repainting when the DOM actually changed:
+       * backdrop() is two full-screen gradients plus all the text. */
+      var ver = doc._ver | 0;
+      if (ver === lastMenuVer) {
+        __vita_set_overlay(1);
+        return;
+      }
+      lastMenuVer = ver;
+    } else {
+      lastMenuVer = -1;
+    }
+    ctx.reset();
+    ctx.clearRect(0, 0, W, H);
+    if (cineOn) renderCine();
+    else renderMenu(ov);
+    __vita_set_overlay(1);
   }
 
   globalThis.__vita_render = render;
