@@ -1,4 +1,4 @@
-/* Hollowdeep Vita — QuickJS host + native command bridge.
+/* Hollowdeep Vita - QuickJS host + native command bridge.
  *
  * The game logic runs unchanged in QuickJS (no transpiling: QuickJS is ES2020);
  * drawing, storage and images are native. The JS side is a small browser shim,
@@ -83,7 +83,14 @@ static void set_error(const char *where, const char *msg) {
 static void dump_exception(const char *where) {
     JSValue e = JS_GetException(g_ctx);
     const char *s = JS_ToCString(g_ctx, e);
-    set_error(where, s ? s : "(exception)");
+    JSValue stack = JS_GetPropertyStr(g_ctx, e, "stack");
+    const char *st = JS_IsString(stack) ? JS_ToCString(g_ctx, stack) : NULL;
+    char msg[900];
+    snprintf(msg, sizeof(msg), "%s%s%s", s ? s : "(exception)",
+             (st && st[0]) ? "\n" : "", (st && st[0]) ? st : "");
+    set_error(where, msg);
+    if (st) JS_FreeCString(g_ctx, st);
+    JS_FreeValue(g_ctx, stack);
     if (s) JS_FreeCString(g_ctx, s);
     JS_FreeValue(g_ctx, e);
 }

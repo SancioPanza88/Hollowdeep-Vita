@@ -1,4 +1,4 @@
-/* Hollowdeep Vita — minimal browser shim.
+/* Hollowdeep Vita - minimal browser shim.
  *
  * Provides the small slice of the DOM/Canvas API the game uses: one 2D canvas
  * implementation backed by the native rasterizer, element trees for the menus,

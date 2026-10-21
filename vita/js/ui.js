@@ -1,4 +1,4 @@
-/* Hollowdeep Vita — overlay renderer.
+/* Hollowdeep Vita - overlay renderer.
  *
  * The browser build draws its menus as HTML/CSS and the cinematic layer as a
  * DOM dialogue box. There is no HTML renderer in the native port, so this file
