@@ -82,6 +82,9 @@ int  img_load_png(int id, const uint8_t *data, int len);
 int  img_width(int id);
 int  img_height(int id);
 
+/* compositing ---------------------------------------------------------- */
+void cv_composite(uint32_t *dst, const uint32_t *base, const uint32_t *src, int n);
+
 #ifdef __cplusplus
 }
 #endif

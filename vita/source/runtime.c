@@ -462,7 +462,7 @@ uint32_t *rt_framebuffer(int *out_w, int *out_h) {
     int w = cv_width(g_game_canvas), h = cv_height(g_game_canvas);
     uint32_t *base = cv_pixels(g_game_canvas);
     uint32_t *ov;
-    int i, n;
+    int n;
     if (!base || w <= 0 || h <= 0) {
         *out_w = 0;
         *out_h = 0;
@@ -491,25 +491,7 @@ uint32_t *rt_framebuffer(int *out_w, int *out_h) {
         return base;
     }
     n = w * h;
-    memcpy(g_comp, base, sizeof(uint32_t) * (size_t)n);
-    for (i = 0; i < n; i++) {
-        uint32_t s = ov[i];
-        int sa = (int)(s >> 24);
-        if (sa == 0) continue;
-        {
-            uint32_t d = g_comp[i];
-            int da = (int)(d >> 24);
-            int ia = 255 - sa;
-            int oa = sa + da * ia / 255;
-            int r, g, b;
-            if (oa <= 0) { g_comp[i] = 0; continue; }
-            r = ((int)(s & 255) * sa + (int)(d & 255) * da * ia / 255) / oa;
-            g = ((int)((s >> 8) & 255) * sa + (int)((d >> 8) & 255) * da * ia / 255) / oa;
-            b = ((int)((s >> 16) & 255) * sa + (int)((d >> 16) & 255) * da * ia / 255) / oa;
-            g_comp[i] = (uint32_t)r | ((uint32_t)g << 8) | ((uint32_t)b << 16) |
-                        ((uint32_t)oa << 24);
-        }
-    }
+    cv_composite(g_comp, base, ov, n);
     *out_w = w;
     *out_h = h;
     return g_comp;

@@ -115,6 +115,7 @@ int main(int argc, char **argv) {
     int frames = 240;
     int shots[64];
     int nshots = 0;
+    int present = 0;
     char outdir[256] = "shots";
     struct ev events[64];
     int nev = 0;
@@ -126,6 +127,7 @@ int main(int argc, char **argv) {
 
     for (i = 1; i < argc; i++) {
         if (!strcmp(argv[i], "--frames") && i + 1 < argc) frames = atoi(argv[++i]);
+        else if (!strcmp(argv[i], "--present")) present = 1;
         else if (!strcmp(argv[i], "--out") && i + 1 < argc) snprintf(outdir, sizeof(outdir), "%s", argv[++i]);
         else if (!strcmp(argv[i], "--keys") && i + 1 < argc) keyspec = argv[++i];
         else if (!strcmp(argv[i], "--shots") && i + 1 < argc) {
@@ -175,6 +177,10 @@ int main(int argc, char **argv) {
             if (events[i].frame == f) rt_key(events[i].key, events[i].down);
         }
         rt_frame((double)f * 33.333);
+        if (present) {
+            int pw = 0, ph = 0;
+            rt_framebuffer(&pw, &ph);
+        }
         for (i = 0; i < nshots; i++) {
             if (shots[i] == f) {
                 int w = 0, h = 0;

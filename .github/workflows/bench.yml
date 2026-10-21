@@ -25,11 +25,13 @@ jobs:
           make -C vita host
           mkdir -p shots
           KEYS="6:ArrowDown,8:ArrowDownUp,10:ArrowDown,12:ArrowDownUp,16:Enter,18:EnterUp,30:Enter,32:EnterUp,40: ,42:SpaceUp,60: ,62:SpaceUp,80: ,82:SpaceUp,100: ,102:SpaceUp"
-          for i in 1 2 3; do
-            start=$(date +%s%N)
-            ./vita/build/hollowdeep_host --frames 180 --out shots --shots 6,30,60,120,179 --keys "$KEYS"
-            end=$(date +%s%N)
-            echo "TOTAL: $(( (end - start) / 1000000 )) ms for 180 frames"
+          for mode in "" "--present"; do
+            for i in 1 2 3; do
+              start=$(date +%s%N)
+              ./vita/build/hollowdeep_host --frames 180 --out shots --shots 6,30,60,120,179 --keys "$KEYS" $mode
+              end=$(date +%s%N)
+              echo "TOTAL[$mode]: $(( (end - start) / 1000000 )) ms for 180 frames"
+            done
           done
           python3 tools/ppm2png.py 'shots/*.ppm'
 
@@ -53,15 +55,20 @@ jobs:
         run: |
           set -eux
           command -v python3 >/dev/null || { apt-get update && apt-get install -y python3; }
+          # same harness (it only reads the runtime, it is not shipped)
+          git fetch --depth=1 origin perf
+          git checkout FETCH_HEAD -- vita/source/main_host.c
           make -C vita clean
           make -C vita host
           mkdir -p shots
           KEYS="6:ArrowDown,8:ArrowDownUp,10:ArrowDown,12:ArrowDownUp,16:Enter,18:EnterUp,30:Enter,32:EnterUp,40: ,42:SpaceUp,60: ,62:SpaceUp,80: ,82:SpaceUp,100: ,102:SpaceUp"
-          for i in 1 2 3; do
-            start=$(date +%s%N)
-            ./vita/build/hollowdeep_host --frames 180 --out shots --shots 179 --keys "$KEYS"
-            end=$(date +%s%N)
-            echo "BASELINE: $(( (end - start) / 1000000 )) ms for 180 frames"
+          for mode in "" "--present"; do
+            for i in 1 2 3; do
+              start=$(date +%s%N)
+              ./vita/build/hollowdeep_host --frames 180 --out shots --shots 179 --keys "$KEYS" $mode
+              end=$(date +%s%N)
+              echo "BASELINE[$mode]: $(( (end - start) / 1000000 )) ms for 180 frames"
+            done
           done
 
   vpk:

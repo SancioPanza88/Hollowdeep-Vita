@@ -561,6 +561,29 @@ static inline uint32_t blend_px(uint32_t dst, uint32_t src, int cov, int comp) {
 
 /* ----------------------------------------------------------- rasterizer */
 
+/* Composite an RGBA overlay onto the game frame. The old runtime.c loop did
+ * straight-alpha "over" with three integer divisions per pixel; the overlay is
+ * full screen, so on a Vita (no hardware divider) that alone blew a whole
+ * frame budget. The game canvas is opaque, which removes the division. */
+void cv_composite(uint32_t *dst, const uint32_t *base, const uint32_t *src, int n) {
+    int i;
+    for (i = 0; i < n; i++) {
+        uint32_t s = src[i];
+        uint32_t d;
+        unsigned int sa = s >> 24;
+        unsigned int ia, r, g, b;
+        if (!sa) { dst[i] = base[i]; continue; }
+        if (sa == 255) { dst[i] = s; continue; }
+        d = base[i];
+        if ((d >> 24) != 255u) { dst[i] = blend_px(d, s, 255, COMP_SOURCE_OVER); continue; }
+        ia = 255u - sa;
+        r = div255((s & 255u) * sa + (d & 255u) * ia);
+        g = div255(((s >> 8) & 255u) * sa + ((d >> 8) & 255u) * ia);
+        b = div255(((s >> 16) & 255u) * sa + ((d >> 16) & 255u) * ia);
+        dst[i] = r | (g << 8) | (b << 16) | 0xFF000000u;
+    }
+}
+
 static void edges_reserve(int extra) {
     if (g_nedges + extra > g_edges_cap) {
         int cap = g_edges_cap ? g_edges_cap : 256;
