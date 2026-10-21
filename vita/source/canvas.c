@@ -590,14 +590,42 @@ static void cross_reserve(int extra) {
     }
 }
 
+static inline const Grad *paint_grad(const Paint *p) {
+    return (p->kind != PAINT_SOLID && p->grad > 0 && p->grad <= MAX_GRAD &&
+            g_grad[p->grad - 1].used) ? &g_grad[p->grad - 1] : NULL;
+}
+
+/* One clipped horizontal run of a solid or gradient fill. */
+static inline void span_fill(uint32_t *row, int x0, int x1, float yc,
+                             const Grad *g, uint32_t solid, int cov, float alpha, int comp) {
+    int j;
+    if (!g) {
+        if (cov <= 0) return;
+        if (cov >= 255 && comp == COMP_SOURCE_OVER) {
+            uint32_t v = (solid & 0x00FFFFFFu) | 0xFF000000u;
+            for (j = x0; j < x1; j++) row[j] = v;
+        } else {
+            for (j = x0; j < x1; j++) row[j] = blend_px(row[j], solid, cov, comp);
+        }
+    } else {
+        for (j = x0; j < x1; j++) {
+            uint32_t col = grad_color(g, (float)j + 0.5f, yc);
+            int a = (int)(ca(col) * alpha + 0.5f);
+            if (a <= 0) continue;
+            if (a >= 255 && comp == COMP_SOURCE_OVER)
+                row[j] = (col & 0x00FFFFFFu) | 0xFF000000u;
+            else
+                row[j] = blend_px(row[j], col, a, comp);
+        }
+    }
+}
+
 static void raster_edges(Canvas *c, const Paint *p) {
     int i, y, nc = 0;
     int ymin = c->h, ymax = 0;
     uint32_t solid = p->rgba;
-    const Grad *g = (p->kind != PAINT_SOLID && p->grad > 0 && p->grad <= MAX_GRAD &&
-                     g_grad[p->grad - 1].used) ? &g_grad[p->grad - 1] : NULL;
+    const Grad *g = paint_grad(p);
     if (g_nedges <= 0) return;
-    if (!g) solid = p->rgba;
     for (i = 0; i < g_nedges; i++) {
         int a = (int)floorf(fminf(g_edges[i].y0, g_edges[i].y1));
         int b = (int)ceilf(fmaxf(g_edges[i].y0, g_edges[i].y1));
@@ -648,26 +676,8 @@ static void raster_edges(Canvas *c, const Paint *p) {
                     if (x1 > c->clip[2]) x1 = c->clip[2];
                     if (x1 <= x0) continue;
                     row = c->px + (size_t)y * c->w;
-                    if (!g) {
-                        int a = (int)(ca(solid) * p->alpha + 0.5f);
-                        if (a <= 0) continue;
-                        if (a >= 255 && p->comp == COMP_SOURCE_OVER) {
-                            uint32_t v = (solid & 0x00FFFFFFu) | 0xFF000000u;
-                            for (j = x0; j < x1; j++) row[j] = v;
-                        } else {
-                            for (j = x0; j < x1; j++) row[j] = blend_px(row[j], solid, a, p->comp);
-                        }
-                    } else {
-                        for (j = x0; j < x1; j++) {
-                            uint32_t col = grad_color(g, (float)j + 0.5f, yc);
-                            int a = (int)(ca(col) * p->alpha + 0.5f);
-                            if (a <= 0) continue;
-                            if (a >= 255 && p->comp == COMP_SOURCE_OVER)
-                                row[j] = (col & 0x00FFFFFFu) | 0xFF000000u;
-                            else
-                                row[j] = blend_px(row[j], col, a, p->comp);
-                        }
-                    }
+                    span_fill(row, x0, x1, yc, g, solid,
+                              (int)(ca(solid) * p->alpha + 0.5f), p->alpha, p->comp);
                 }
             }
         }
@@ -740,7 +750,25 @@ void cv_fill_rect(int id, float x, float y, float w, float h, int paint, uint32_
     a = xf(&c->m, x, y);
     b = xf(&c->m, x + w, y + h);
     if (c->m.b == 0.0f && c->m.c == 0.0f) {
-        fill_box(c, fminf(a.x, b.x), fminf(a.y, b.y), fmaxf(a.x, b.x), fmaxf(a.y, b.y), &p);
+        /* Axis-aligned rectangles are the common case (backgrounds, HUD
+         * bars, dialog boxes): fill them directly instead of building an
+         * edge list, sorting crossings and dividing per edge per scanline. */
+        int x0, x1, y0, y1, yy;
+        const Grad *g = paint_grad(&p);
+        int cov = (int)(ca(rgba) * p.alpha + 0.5f);
+        x0 = (int)ceilf(fminf(a.x, b.x) - 0.5f);
+        x1 = (int)ceilf(fmaxf(a.x, b.x) - 0.5f);
+        y0 = (int)ceilf(fminf(a.y, b.y) - 0.5f);
+        y1 = (int)ceilf(fmaxf(a.y, b.y) - 0.5f);
+        if (x0 < c->clip[0]) x0 = c->clip[0];
+        if (y0 < c->clip[1]) y0 = c->clip[1];
+        if (x1 > c->clip[2]) x1 = c->clip[2];
+        if (y1 > c->clip[3]) y1 = c->clip[3];
+        if (x1 <= x0 || y1 <= y0) return;
+        for (yy = y0; yy < y1; yy++) {
+            uint32_t *row = c->px + (size_t)yy * c->w;
+            span_fill(row, x0, x1, (float)yy + 0.5f, g, rgba, cov, p.alpha, comp);
+        }
     } else {
         V2 q[4];
         q[0] = a;
