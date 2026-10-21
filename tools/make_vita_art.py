@@ -19,18 +19,37 @@ RED = (120, 14, 22)
 PAPER = (242, 230, 201)
 
 
-def write_png(path, w, h, pixels):
+def write_png(path, w, h, pixels, alpha=False):
+    """Write an 8-bit PNG. Pixels are (r, g, b) tuples, or (r, g, b, a) when
+    alpha is set.
+
+    The Vita's package installer rejects icon0.png with an alpha channel
+    (error 0x8010113D), and every channel count here must match the pixels we
+    actually emit or the file is a malformed PNG.
+    """
+    bpp = 4 if alpha else 3
+    color_type = 6 if alpha else 2
     raw = bytearray()
     for y in range(h):
         raw.append(0)
         for x in range(w):
-            raw.extend(pixels[y * w + x])
+            px = pixels[y * w + x]
+            raw.extend(px[:bpp] if len(px) >= bpp else tuple(px) + (255,) * (bpp - len(px)))
+    if len(raw) != h * (1 + w * bpp):
+        raise ValueError("pixel buffer does not match %dx%d" % (w, h))
+
     def chunk(tag, data):
         return (struct.pack(">I", len(data)) + tag + data +
                 struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF))
+
+    packed = zlib.compress(bytes(raw), 9)
+    # Round-trip check: a mismatch between IHDR and the row bytes is invisible
+    # to the writer but fatal to Sony's installer.
+    if len(zlib.decompress(packed)) != len(raw):
+        raise ValueError("png payload mismatch")
     png = (b"\x89PNG\r\n\x1a\n" +
-           chunk(b"IHDR", struct.pack(">IIBBBBB", w, h, 8, 6, 0, 0, 0)) +
-           chunk(b"IDAT", zlib.compress(bytes(raw), 9)) +
+           chunk(b"IHDR", struct.pack(">IIBBBBB", w, h, 8, color_type, 0, 0, 0)) +
+           chunk(b"IDAT", packed) +
            chunk(b"IEND", b""))
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "wb") as f:

@@ -793,7 +793,25 @@
     ev.type = type;
     for (var i = 0; i < a.length; i++) {
       try { a[i].call(globalThis, ev); } catch (e) { console.error(e); }
+      if (ev._stopped) break;
     }
+  }
+
+  /* Minimal DOM event: the game calls preventDefault/stopPropagation/
+   * stopImmediatePropagation on keyboard and pointer events, so every handler
+   * path must have them or the whole listener throws. */
+  function vitaEvent(type, extra) {
+    var ev = {
+      type: type, target: null, currentTarget: null, srcElement: null,
+      isTrusted: true, bubbles: true, cancelable: true, composed: true,
+      defaultPrevented: false, cancelBubble: false, _stopped: false,
+      timeStamp: 0,
+      preventDefault: function () { this.defaultPrevented = true; },
+      stopPropagation: function () { this.cancelBubble = true; },
+      stopImmediatePropagation: function () { this.cancelBubble = true; this._stopped = true; }
+    };
+    if (extra) for (var k in extra) ev[k] = extra[k];
+    return ev;
   }
 
   /* --------------------------------------------------------------- timers */
@@ -894,21 +912,23 @@
 
   /* ------------------------------------------------------------ input/loop */
   g.__vita_key = function (key, down) {
-    var ev = {
-      key: key, code: key, repeat: false, target: null, isTrusted: true,
-      preventDefault: function () {}, stopPropagation: function () {}
-    };
-    dispatchWin(down ? 'keydown' : 'keyup', ev);
+    var ev = vitaEvent(down ? 'keydown' : 'keyup', {
+      key: key, code: key, keyCode: key === ' ' ? 32 : 0, which: key === ' ' ? 32 : 0,
+      charCode: 0, repeat: false, shiftKey: false, ctrlKey: false, altKey: false,
+      metaKey: false, target: doc.getElementById('c')
+    });
+    dispatchWin(ev.type, ev);
   };
   g.__vita_touch = function (kind, x, y) {
     var cv = doc.getElementById('c');
     if (!cv) return;
-    var ev = {
-      type: kind, clientX: x, clientY: y, pageX: x, pageY: y, pointerId: 1,
-      pointerType: 'touch', isPrimary: true, button: 0, buttons: kind === 'pointerdown' ? 1 : 0,
-      target: cv, preventDefault: function () {}, stopPropagation: function () {},
+    var ev = vitaEvent(kind, {
+      clientX: x, clientY: y, pageX: x, pageY: y, screenX: x, screenY: y,
+      pointerId: 1, pointerType: 'touch', isPrimary: true, button: 0,
+      buttons: kind === 'pointerdown' ? 1 : 0,
+      target: cv,
       setPointerCapture: function () {}, releasePointerCapture: function () {}
-    };
+    });
     cv.dispatchEvent(ev);
   };
 

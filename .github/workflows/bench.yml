@@ -1,0 +1,29 @@
+name: Profile (host harness)
+
+# Temporary: profiles the same runtime the Vita build uses so the rasterizer
+# hotspots are visible before optimising them. Not part of the release flow.
+on:
+  workflow_dispatch:
+  push:
+    branches: [ perf ]
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+    container:
+      image: vitasdk/vitasdk:2026.08
+    env:
+      VITASDK: /usr/local/vitasdk
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Profile
+        run: |
+          set -eux
+          command -v python3 >/dev/null || { apt-get update && apt-get install -y python3; }
+          command -v gprof >/dev/null || { apt-get update && apt-get install -y binutils; }
+          make -C vita clean
+          make -C vita host HOST_CFLAGS="-O2 -g -pg -std=gnu11 -Ibuild/generated -Isource -Ithird_party -Ithird_party/quickjs -D_GNU_SOURCE -DCONFIG_VERSION='\"2025-09-13\"' -DHOLLOWDEEP_HOST=1"
+          mkdir -p shots
+          /usr/bin/time -v ./vita/build/hollowdeep_host --frames 180 --out shots --shots 179
+          gprof -b ./vita/build/hollowdeep_host gmon.out | head -70
