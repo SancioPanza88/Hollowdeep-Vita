@@ -82,15 +82,19 @@ static void set_error(const char *where, const char *msg) {
 
 static void dump_exception(const char *where) {
     JSValue e = JS_GetException(g_ctx);
-    const char *s = JS_ToCString(g_ctx, e);
+    JSValue linev = JS_GetPropertyStr(g_ctx, e, "lineNumber");
     JSValue stack = JS_GetPropertyStr(g_ctx, e, "stack");
-    const char *st = JS_IsString(stack) ? JS_ToCString(g_ctx, stack) : NULL;
-    char msg[900];
-    snprintf(msg, sizeof(msg), "%s%s%s", s ? s : "(exception)",
+    const char *s = JS_ToCString(g_ctx, e);
+    const char *st = JS_IsUndefined(stack) ? NULL : JS_ToCString(g_ctx, stack);
+    int32_t line = -1;
+    char msg[1400];
+    JS_ToInt32(g_ctx, &line, linev);
+    snprintf(msg, sizeof(msg), "%s [line %d]%s%s", s ? s : "(exception)", (int)line,
              (st && st[0]) ? "\n" : "", (st && st[0]) ? st : "");
     set_error(where, msg);
     if (st) JS_FreeCString(g_ctx, st);
     JS_FreeValue(g_ctx, stack);
+    JS_FreeValue(g_ctx, linev);
     if (s) JS_FreeCString(g_ctx, s);
     JS_FreeValue(g_ctx, e);
 }
@@ -118,6 +122,14 @@ static int eval_global(const char *name, const unsigned char *buf, unsigned int 
     }
     v = JS_Eval(g_ctx, (const char *)buf, len, name, JS_EVAL_TYPE_GLOBAL);
     if (JS_IsException(v)) {
+        unsigned int k, bad = 0;
+        char dbg[128];
+        for (k = 0; k < len; k++) {
+            if (buf[k] >= 128 || buf[k] == 0) { bad = k + 1; break; }
+        }
+        snprintf(dbg, sizeof(dbg), "[eval] %s len=%u firstHigh=%u", name, len, bad);
+        plat_log(dbg);
+        plat_log("\n");
         dump_exception(name);
         JS_FreeValue(g_ctx, v);
         return 0;
