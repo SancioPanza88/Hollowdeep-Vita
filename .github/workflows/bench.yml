@@ -8,7 +8,7 @@ on:
     branches: [ perf ]
 
 jobs:
-  bench:
+  current:
     runs-on: ubuntu-latest
     container:
       image: vitasdk/vitasdk:2026.08
@@ -25,8 +25,40 @@ jobs:
           make -C vita clean
           make -C vita host HOST_CFLAGS="-O2 -g -pg -std=gnu11 -Ibuild/generated -Isource -Ithird_party -Ithird_party/quickjs -D_GNU_SOURCE -DCONFIG_VERSION='\"2025-09-13\"' -DHOLLOWDEEP_HOST=1"
           mkdir -p shots
+          KEYS="6:ArrowDown,8:ArrowDownUp,10:ArrowDown,12:ArrowDownUp,16:Enter,18:EnterUp,30:Enter,32:EnterUp,40: ,42:SpaceUp,60: ,62:SpaceUp,80: ,82:SpaceUp,100: ,102:SpaceUp"
           start=$(date +%s%N)
-          ./vita/build/hollowdeep_host --frames 180 --out shots --shots 179
+          ./vita/build/hollowdeep_host --frames 180 --out shots --shots 6,30,60,120,179 --keys "$KEYS"
           end=$(date +%s%N)
           echo "TOTAL: $(( (end - start) / 1000000 )) ms for 180 frames"
-          gprof -b ./vita/build/hollowdeep_host gmon.out | head -70
+          gprof -b ./vita/build/hollowdeep_host gmon.out | head -40
+          python3 tools/ppm2png.py 'shots/*.ppm'
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shots-current
+          path: shots/*.png
+
+  baseline:
+    runs-on: ubuntu-latest
+    container:
+      image: vitasdk/vitasdk:2026.08
+    env:
+      VITASDK: /usr/local/vitasdk
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Time baseline
+        run: |
+          set -eux
+          command -v python3 >/dev/null || { apt-get update && apt-get install -y python3; }
+          make -C vita clean
+          make -C vita host HOST_CFLAGS="-O2 -g -pg -std=gnu11 -Ibuild/generated -Isource -Ithird_party -Ithird_party/quickjs -D_GNU_SOURCE -DCONFIG_VERSION='\"2025-09-13\"' -DHOLLOWDEEP_HOST=1"
+          mkdir -p shots
+          KEYS="6:ArrowDown,8:ArrowDownUp,10:ArrowDown,12:ArrowDownUp,16:Enter,18:EnterUp,30:Enter,32:EnterUp,40: ,42:SpaceUp,60: ,62:SpaceUp,80: ,82:SpaceUp,100: ,102:SpaceUp"
+          start=$(date +%s%N)
+          ./vita/build/hollowdeep_host --frames 180 --out shots --shots 179 --keys "$KEYS"
+          end=$(date +%s%N)
+          echo "BASELINE: $(( (end - start) / 1000000 )) ms for 180 frames"
+          gprof -b ./vita/build/hollowdeep_host gmon.out | head -12
