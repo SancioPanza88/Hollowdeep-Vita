@@ -33,7 +33,7 @@ WARN := -Wall -Wno-unused-parameter -Wno-unused-function -Wno-format-truncation
 QJS_DEFS := -D_GNU_SOURCE -DCONFIG_VERSION='"2025-09-13"'
 
 HOST_CFLAGS := -O2 -g -std=gnu11 $(WARN) $(INCLUDES) $(QJS_DEFS) -DHOLLOWDEEP_HOST=1
-VITA_CFLAGS := -O3 -std=gnu11 $(WARN) $(INCLUDES) $(QJS_DEFS) -DHOLLOWDEEP_VITA=1 \
+VITA_CFLAGS := -O2 -std=gnu11 $(WARN) $(INCLUDES) $(QJS_DEFS) -DHOLLOWDEEP_VITA=1 \
 	-mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -ffunction-sections -fdata-sections
 
 .PHONY: all host vpk clean assets
@@ -82,6 +82,10 @@ host: $(BUILD)/hollowdeep_host
 
 $(OBJV)/%.o: source/%.c | $(OBJV)
 	$(VITA_CC) $(VITA_CFLAGS) -c $< -o $@
+
+# The rasterizer is the hot path: let GCC vectorise/inline it harder than the
+# rest of the binary (QuickJS at -O3 only grows and thrashes the I-cache).
+$(OBJV)/canvas.o: VITA_CFLAGS += -O3
 
 $(OBJV)/runtime.o: $(GEN)/assets_data.c
 

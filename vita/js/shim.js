@@ -459,7 +459,11 @@
     while (node) {
       ev.currentTarget = node;
       var a = node._ls && node._ls[ev.type];
-      if (a) for (var i = 0; i < a.length; i++) { try { a[i].call(node, ev); } catch (e) { console.error(e); } }
+      if (a) for (var i = 0; i < a.length; i++) {
+        try { a[i].call(node, ev); } catch (e) { console.error(e); }
+        if (ev._stopped) break;
+      }
+      if (ev._stopped || ev.cancelBubble) break;
       node = ev.bubbles === false ? null : node.parentNode;
     }
     return true;

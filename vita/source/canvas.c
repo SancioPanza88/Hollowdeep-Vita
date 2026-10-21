@@ -731,15 +731,6 @@ static void fill_path(Canvas *c, const Paint *p) {
     raster_edges(c, p);
 }
 
-static void fill_box(Canvas *c, float x0, float y0, float x1, float y1, const Paint *p) {
-    V2 q[4];
-    q[0].x = x0; q[0].y = y0;
-    q[1].x = x1; q[1].y = y0;
-    q[2].x = x1; q[2].y = y1;
-    q[3].x = x0; q[3].y = y1;
-    fill_poly(c, q, 4, p);
-}
-
 /* ------------------------------------------------------------- drawing */
 
 void cv_clear_rect(int id, float x, float y, float w, float h) {
