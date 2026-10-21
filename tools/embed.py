@@ -9,9 +9,12 @@ OUT_DIR = os.path.join(ROOT, "vita", "build", "generated")
 
 
 def c_array(name: str, data: bytes) -> str:
+    # The trailing 0 byte matters: QuickJS' lexer needs a NUL sentinel at the
+    # end of the source, otherwise it keeps reading past the buffer into the
+    # next asset and dies with "unexpected character" at EOF.
     out = ["const unsigned char %s[] = {" % name]
     line = []
-    for i, b in enumerate(data):
+    for b in list(data) + [0]:
         line.append(str(b))
         if len(line) == 24:
             out.append(",".join(line) + ",")
